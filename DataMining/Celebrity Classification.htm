@@ -1,0 +1,2089 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:宋体;
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:等线;
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+@font-face
+	{font-family:"\@等线";
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+@font-face
+	{font-family:"\@宋体";
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:10.5pt;
+	font-family:等线;}
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+	{margin:0cm;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:21.0pt;
+	font-size:10.5pt;
+	font-family:等线;}
+p.MsoBibliography, li.MsoBibliography, div.MsoBibliography
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:36.0pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:-36.0pt;
+	line-height:200%;
+	font-size:10.5pt;
+	font-family:等线;}
+.MsoChpDefault
+	{font-size:10.5pt;}
+ /* Page Definitions */
+ @page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:70.9pt 70.9pt 70.9pt 70.9pt;
+	layout-grid:15.6pt;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+
+</head>
+
+<body lang=ZH-CN link="#0563C1" vlink="#954F72" style='word-wrap:break-word;
+text-justify-trim:punctuation'>
+
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:150%'><b><span
+lang=EN-US style='font-size:16.0pt;line-height:150%;font-family:"Times New Roman",serif'>Machine
+Learning Models for Image Recognition</span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><a
+name="_Toc166767912"><b><span lang=EN-US style='font-size:14.0pt;line-height:
+150%;font-family:"Times New Roman",serif'>Executive summary</span></b></a></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>This
+study aimed to achieve classification predictions for 19 specified celebrities
+using input image data.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>The
+dataset used in this study contains 3334 celebrity image entries, each
+containing 10000 feature values. The initial data preprocessing stage involved
+reshaping row data into NumPy arrays of shape (100, 100, 1) for single-channel
+grayscale images or (100, 100, 3) for RGB images. &nbsp;This preprocessed
+data&nbsp;was then fed&nbsp;into various training models. In addition, the
+labels in the dataset&nbsp;were encoded&nbsp;to facilitate the machine-learning
+process.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>The
+dataset&nbsp;was divided&nbsp;into a training set (70%), a validation set (20%)
+and a test set (10%). Three models&nbsp;were trained&nbsp;during the study:
+ANN, OpenCV and CNN. The key performance metrics considered include precision,
+recall, F1 score and accuracy. The performance of each model was further analyzed
+through a confusion matrix to check for misclassification.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>The
+CNN model demonstrated the best overall performance, with 81% precision, 78%
+recall, 78% F1 score, and 78% accuracy. Compared to the other models in the
+test, CNN is clearly more effective for image recognition tasks.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>This
+study used Python, which was selected for its extensive and powerful libraries.
+These include NumPy for data manipulation, OpenCV for image processing, and
+various machine learning libraries such as TensorFlow
+and&nbsp;scikit-learn&nbsp;for model training and evaluation.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:18.0pt;text-align:left;
+text-indent:-18.0pt;line-height:150%'><a name="_Toc166767913"><b><span
+lang=EN-US style='font-size:14.0pt;line-height:150%;font-family:"Times New Roman",serif'>1.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span></b><b><span
+lang=EN-US style='font-size:14.0pt;line-height:150%;font-family:"Times New Roman",serif'>Introduction</span></b></a></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>This
+project aims to perform celebrity classification predictions using provided
+image data. The dataset comprises 19 predefined celebrity categories, and the
+objective is to classify inputs into these categories. Fundamentally, this
+research focuses on facial feature extraction and recognition classification, a
+field with significant implications across various domains.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>The
+ability to accurately classify individuals in images has a wide range of
+applications, from security systems and personal identity verification to
+digital entertainment. By advancing our understanding and capabilities in
+facial recognition, we can develop more sophisticated and reliable systems that
+can be deployed in real-world scenarios.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Facial
+recognition techniques have evolved significantly over the years. Initially,
+systems such as Eigenfaces, developed in the 1990s, used linear algebra and
+principal component analysis to extract facial features</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>(Kshirsagar
+et al., 2011)</span><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif'>. Over time, more advanced methods such as
+Fisherfaces and local binary patterns have&nbsp;been developed&nbsp;to increase
+the system's robustness</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>(Belhumeur
+et al., 1997)</span><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif'>. These methods recognize faces more
+efficiently under a variety of conditions.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>The
+advent of deep learning has completely revolutionized the classification, identification,
+and facial recognition fields</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>(Han
+et al., 2021)</span><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif'>. Convolutional neural network (CNN) is a
+type of deep neural network that is particularly well-suited to image
+processing tasks. In contrast to traditional algorithms, which require manual
+feature extraction, CNN learns patterns directly from image pixels. Each layer
+of the network learns to recognize increasingly complex features</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>(Liu
+et al., 2021)</span><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif'>.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Artificial
+neural networks (ANN) represent another foundational technology in facial
+recognition. While less specialized than CNN in dealing with spatial
+hierarchies, ANN is also crucial for tasks that require modelling complex
+non-linear relationships. As a result, it typically requires manual feature
+engineering to identify relevant facial features prior to training, which makes
+them less efficient than CNN in processing raw image data.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>OpenCV,
+which stands for Open-Source Computer Vision, offers a comprehensive suite of
+tools for facial recognition. It includes methods such as Haar Cascades</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>(Kaur
+&amp; Mirza, 2021)</span><span lang=EN-US style='font-size:12.0pt;line-height:
+150%;font-family:"Times New Roman",serif'> and Histogram of Oriented Gradients
+(HOG)</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>(Rifaee
+et al., 2022)</span><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif'>, which&nbsp;were previously widely
+used&nbsp;before the advent of deep learning.&nbsp;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>This
+project will investigate the performance of CNN, ANN, and OpenCV in face
+recognition classification tasks. By in-depth investigation of these methods,
+we aim to accurately classify input information into the predefined 19
+celebrity categories and uncover some insights into image recognition
+classification algorithms. </span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:18.0pt;text-align:left;
+text-indent:-18.0pt;line-height:150%'><a name="_Toc166767914"><b><span
+lang=EN-US style='font-size:14.0pt;line-height:150%;font-family:"Times New Roman",serif'>2.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span></b><b><span
+lang=EN-US style='font-size:14.0pt;line-height:150%;font-family:"Times New Roman",serif'>Materials
+and Methodologies</span></b></a></p>
+
+<p class=MsoListParagraph align=left style='margin-left:18.0pt;text-align:left;
+text-indent:-18.0pt;line-height:150%'><a name="_Toc166767915"><span lang=EN-US
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>2.1<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span lang=EN-US
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Materials</span></a><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>
+</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:36.0pt;text-align:left;
+text-indent:-36.0pt;line-height:150%'><a name="_Toc166767916"><span lang=EN-US
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>2.1.1<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Dataset
+Description</span></a></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>2.1.1.1
+Image files</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>The
+image files comprise 19 folders, each representing a different celebrity. Each
+folder contains approximately 200 or more facial images. The images include a
+variety of angles and expressions, with some individuals in the images wearing
+glasses or&nbsp;make-up,&nbsp;and some in black and white. The image size is
+not standardized, ranging from 100 to 500 pixels in width or length.&nbsp;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>The
+Table1 below provides an overview of information about the image files.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Table
+1: Image statistics</span></p>
+
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width=510
+ style='width:382.5pt;border-collapse:collapse;border:none'>
+ <tr style='height:14.0pt'>
+  <td width=151 nowrap style='width:113.15pt;border:solid windowtext 1.0pt;
+  background:#D9D9D9;padding:0cm 5.4pt 0cm 5.4pt;height:14.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+  color:black'>Folder Name</span></p>
+  </td>
+  <td width=116 nowrap style='width:86.85pt;border:solid windowtext 1.0pt;
+  border-left:none;background:#D9D9D9;padding:0cm 5.4pt 0cm 5.4pt;height:14.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+  color:black'>Image Count</span></p>
+  </td>
+  <td width=120 nowrap style='width:90.35pt;border:solid windowtext 1.0pt;
+  border-left:none;background:#D9D9D9;padding:0cm 5.4pt 0cm 5.4pt;height:14.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+  color:black'>Min Resolution</span></p>
+  </td>
+  <td width=123 nowrap style='width:92.15pt;border:solid windowtext 1.0pt;
+  border-left:none;background:#D9D9D9;padding:0cm 5.4pt 0cm 5.4pt;height:14.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+  color:black'>Max Resolution</span></p>
+  </td>
+ </tr>
+ <tr style='height:14.0pt'>
+  <td width=151 nowrap style='width:113.15pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:14.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Alexandra
+  Daddario</span></p>
+  </td>
+  <td width=116 nowrap style='width:86.85pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>215</span></p>
+  </td>
+  <td width=120 nowrap style='width:90.35pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>95*108</span></p>
+  </td>
+  <td width=123 nowrap style='width:92.15pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>564*668</span></p>
+  </td>
+ </tr>
+ <tr style='height:14.0pt'>
+  <td width=151 nowrap style='width:113.15pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:14.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>amber
+  heard</span></p>
+  </td>
+  <td width=116 nowrap style='width:86.85pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>208</span></p>
+  </td>
+  <td width=120 nowrap style='width:90.35pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>102*105</span></p>
+  </td>
+  <td width=123 nowrap style='width:92.15pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>550*668</span></p>
+  </td>
+ </tr>
+ <tr style='height:14.0pt'>
+  <td width=151 nowrap style='width:113.15pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:14.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Andy
+  Samberg</span></p>
+  </td>
+  <td width=116 nowrap style='width:86.85pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>186</span></p>
+  </td>
+  <td width=120 nowrap style='width:90.35pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>95*108</span></p>
+  </td>
+  <td width=123 nowrap style='width:92.15pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>550*658</span></p>
+  </td>
+ </tr>
+ <tr style='height:14.0pt'>
+  <td width=151 nowrap style='width:113.15pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:14.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Anne
+  Hathaway</span></p>
+  </td>
+  <td width=116 nowrap style='width:86.85pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>193</span></p>
+  </td>
+  <td width=120 nowrap style='width:90.35pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>102*108</span></p>
+  </td>
+  <td width=123 nowrap style='width:92.15pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>527*558</span></p>
+  </td>
+ </tr>
+ <tr style='height:14.0pt'>
+  <td width=151 nowrap style='width:113.15pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:14.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Chris
+  Hemsworth</span></p>
+  </td>
+  <td width=116 nowrap style='width:86.85pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>149</span></p>
+  </td>
+  <td width=120 nowrap style='width:90.35pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>102*108</span></p>
+  </td>
+  <td width=123 nowrap style='width:92.15pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>564*668</span></p>
+  </td>
+ </tr>
+ <tr style='height:14.0pt'>
+  <td width=151 nowrap style='width:113.15pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:14.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Chris
+  Pratt</span></p>
+  </td>
+  <td width=116 nowrap style='width:86.85pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>166</span></p>
+  </td>
+  <td width=120 nowrap style='width:90.35pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>100*108</span></p>
+  </td>
+  <td width=123 nowrap style='width:92.15pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>564*671</span></p>
+  </td>
+ </tr>
+ <tr style='height:14.0pt'>
+  <td width=151 nowrap style='width:113.15pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:14.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Dwayne
+  Johnson</span></p>
+  </td>
+  <td width=116 nowrap style='width:86.85pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>131</span></p>
+  </td>
+  <td width=120 nowrap style='width:90.35pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>102*108</span></p>
+  </td>
+  <td width=123 nowrap style='width:92.15pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>564*668</span></p>
+  </td>
+ </tr>
+ <tr style='height:14.0pt'>
+  <td width=151 nowrap style='width:113.15pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:14.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Emma
+  Stone</span></p>
+  </td>
+  <td width=116 nowrap style='width:86.85pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>129</span></p>
+  </td>
+  <td width=120 nowrap style='width:90.35pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>102*108</span></p>
+  </td>
+  <td width=123 nowrap style='width:92.15pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>527*558</span></p>
+  </td>
+ </tr>
+ <tr style='height:14.0pt'>
+  <td width=151 nowrap style='width:113.15pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:14.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Emma
+  Watson</span></p>
+  </td>
+  <td width=116 nowrap style='width:86.85pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>201</span></p>
+  </td>
+  <td width=120 nowrap style='width:90.35pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>101*128</span></p>
+  </td>
+  <td width=123 nowrap style='width:92.15pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>527*558</span></p>
+  </td>
+ </tr>
+ <tr style='height:14.0pt'>
+  <td width=151 nowrap style='width:113.15pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:14.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Henry
+  Cavil</span></p>
+  </td>
+  <td width=116 nowrap style='width:86.85pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>185</span></p>
+  </td>
+  <td width=120 nowrap style='width:90.35pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>102*108</span></p>
+  </td>
+  <td width=123 nowrap style='width:92.15pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>564*668</span></p>
+  </td>
+ </tr>
+ <tr style='height:14.0pt'>
+  <td width=151 nowrap style='width:113.15pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:14.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Hugh
+  Jackman</span></p>
+  </td>
+  <td width=116 nowrap style='width:86.85pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>169</span></p>
+  </td>
+  <td width=120 nowrap style='width:90.35pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>99*108</span></p>
+  </td>
+  <td width=123 nowrap style='width:92.15pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>527*558</span></p>
+  </td>
+ </tr>
+ <tr style='height:14.0pt'>
+  <td width=151 nowrap style='width:113.15pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:14.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Jason
+  Momoa</span></p>
+  </td>
+  <td width=116 nowrap style='width:86.85pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>174</span></p>
+  </td>
+  <td width=120 nowrap style='width:90.35pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>102*108</span></p>
+  </td>
+  <td width=123 nowrap style='width:92.15pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>564*802</span></p>
+  </td>
+ </tr>
+ <tr style='height:14.0pt'>
+  <td width=151 nowrap style='width:113.15pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:14.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Margot
+  Robbie</span></p>
+  </td>
+  <td width=116 nowrap style='width:86.85pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>211</span></p>
+  </td>
+  <td width=120 nowrap style='width:90.35pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>102*108</span></p>
+  </td>
+  <td width=123 nowrap style='width:92.15pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>564*802</span></p>
+  </td>
+ </tr>
+ <tr style='height:14.0pt'>
+  <td width=151 nowrap style='width:113.15pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:14.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Robert
+  Downey Jr</span></p>
+  </td>
+  <td width=116 nowrap style='width:86.85pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>223</span></p>
+  </td>
+  <td width=120 nowrap style='width:90.35pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>93*108</span></p>
+  </td>
+  <td width=123 nowrap style='width:92.15pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>558*668</span></p>
+  </td>
+ </tr>
+ <tr style='height:14.0pt'>
+  <td width=151 nowrap style='width:113.15pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:14.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Scarlett
+  Johansson</span></p>
+  </td>
+  <td width=116 nowrap style='width:86.85pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>191</span></p>
+  </td>
+  <td width=120 nowrap style='width:90.35pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>102*108</span></p>
+  </td>
+  <td width=123 nowrap style='width:92.15pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>564*668</span></p>
+  </td>
+ </tr>
+ <tr style='height:14.0pt'>
+  <td width=151 nowrap style='width:113.15pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:14.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Taylor
+  Swift</span></p>
+  </td>
+  <td width=116 nowrap style='width:86.85pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>121</span></p>
+  </td>
+  <td width=120 nowrap style='width:90.35pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>102*108</span></p>
+  </td>
+  <td width=123 nowrap style='width:92.15pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>489*547</span></p>
+  </td>
+ </tr>
+ <tr style='height:14.0pt'>
+  <td width=151 nowrap style='width:113.15pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:14.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Tom
+  Holland</span></p>
+  </td>
+  <td width=116 nowrap style='width:86.85pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>179</span></p>
+  </td>
+  <td width=120 nowrap style='width:90.35pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>99*108</span></p>
+  </td>
+  <td width=123 nowrap style='width:92.15pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>527*558</span></p>
+  </td>
+ </tr>
+ <tr style='height:14.0pt'>
+  <td width=151 nowrap style='width:113.15pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:14.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Zendaya</span></p>
+  </td>
+  <td width=116 nowrap style='width:86.85pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>128</span></p>
+  </td>
+  <td width=120 nowrap style='width:90.35pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>102*108</span></p>
+  </td>
+  <td width=123 nowrap style='width:92.15pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>489*554</span></p>
+  </td>
+ </tr>
+ <tr style='height:14.0pt'>
+  <td width=151 nowrap style='width:113.15pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:14.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Zoe
+  Saldana</span></p>
+  </td>
+  <td width=116 nowrap style='width:86.85pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>176</span></p>
+  </td>
+  <td width=120 nowrap style='width:90.35pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>102*105</span></p>
+  </td>
+  <td width=123 nowrap style='width:92.15pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>527*554</span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>2.1.1.2
+Image data</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>The
+original dataset also contains image data in six spreadsheets, divided into two
+main categories: labelled and unlabelled datasets. Each category contains three
+image resolutions: 20*20, 50*50, and 100*100.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Table
+2 below provides an overview of the image dataset.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Table
+2: Image data statistics</span></p>
+
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width=623
+ style='width:467.55pt;border-collapse:collapse;border:none'>
+ <tr style='height:14.0pt'>
+  <td width=91 nowrap style='width:68.0pt;border:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Type</span></p>
+  </td>
+  <td width=211 nowrap style='width:158.55pt;border:solid windowtext 1.0pt;
+  border-left:none;padding:0cm 5.4pt 0cm 5.4pt;height:14.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>File
+  Name</span></p>
+  </td>
+  <td width=161 nowrap style='width:120.5pt;border:solid windowtext 1.0pt;
+  border-left:none;padding:0cm 5.4pt 0cm 5.4pt;height:14.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Number
+  of Images</span></p>
+  </td>
+  <td width=161 nowrap style='width:120.5pt;border:solid windowtext 1.0pt;
+  border-left:none;padding:0cm 5.4pt 0cm 5.4pt;height:14.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Features
+  per Image</span></p>
+  </td>
+ </tr>
+ <tr style='height:14.0pt'>
+  <td width=91 nowrap rowspan=3 style='width:68.0pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:14.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>labelled</span></p>
+  </td>
+  <td width=211 nowrap style='width:158.55pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>training_celeb20x20</span></p>
+  </td>
+  <td width=161 nowrap style='width:120.5pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>3335</span></p>
+  </td>
+  <td width=161 nowrap style='width:120.5pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>400</span></p>
+  </td>
+ </tr>
+ <tr style='height:14.0pt'>
+  <td width=211 nowrap style='width:158.55pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>training_celeb50x50</span></p>
+  </td>
+  <td width=161 nowrap style='width:120.5pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>3335</span></p>
+  </td>
+  <td width=161 nowrap style='width:120.5pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>2500</span></p>
+  </td>
+ </tr>
+ <tr style='height:14.0pt'>
+  <td width=211 nowrap style='width:158.55pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>training_celeb100x100</span></p>
+  </td>
+  <td width=161 nowrap style='width:120.5pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>3335</span></p>
+  </td>
+  <td width=161 nowrap style='width:120.5pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>10000</span></p>
+  </td>
+ </tr>
+ <tr style='height:14.0pt'>
+  <td width=91 nowrap rowspan=3 style='width:68.0pt;border:solid windowtext 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:14.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>unlabelled</span></p>
+  </td>
+  <td width=211 nowrap style='width:158.55pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>unlabelledtest_celeb20x20</span></p>
+  </td>
+  <td width=161 nowrap style='width:120.5pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>3335</span></p>
+  </td>
+  <td width=161 nowrap style='width:120.5pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>400</span></p>
+  </td>
+ </tr>
+ <tr style='height:14.0pt'>
+  <td width=211 nowrap style='width:158.55pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>unlabelledtest_celeb50x50</span></p>
+  </td>
+  <td width=161 nowrap style='width:120.5pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>3335</span></p>
+  </td>
+  <td width=161 nowrap style='width:120.5pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>2500</span></p>
+  </td>
+ </tr>
+ <tr style='height:14.0pt'>
+  <td width=211 nowrap style='width:158.55pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>unlabelledtest_celeb100x100</span></p>
+  </td>
+  <td width=161 nowrap style='width:120.5pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>3335</span></p>
+  </td>
+  <td width=161 nowrap style='width:120.5pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt;height:14.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>10000</span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>2.1.1.3Selected
+dataset for analysis</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>In
+this study, we trained the model on labelled datasets, initially experimenting
+with image resolutions of 20x20, 50x50 and 100x100 to test the models. Finally,
+we decided to train three different models using the 100x100 resolution. We
+selected this resolution because it provides more detailed information than
+20x20 and 50x50, which is crucial for the models to learn more complex
+features.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Specifically,
+we selected the following datasets for analysis:</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>(1)
+Labelled 100x100 dataset: Used to train the model.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>(2)
+Unlabelled 100x100 dataset: Used to test the final results after the final
+deployment of the model.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:36.0pt;text-align:left;
+text-indent:-36.0pt;line-height:150%'><a name="_Toc166767917"><span lang=EN-US
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>2.1.2<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Variable
+Description</span></a></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>The
+100*100 labelled data set comprises two types of variables. The first column,
+'celeb', represents the label, indicating the celebrity's name corresponding to
+each row of data. The data is of a string data type.&nbsp;The columns from the
+2nd to 10001st represent the features of each image, with a float data type
+ranging from -1 to 1. The column names range from c1r1 (representing the
+features in the first row of the first column of the image) to c100r100.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>In
+the unlabelled 100x100 dataset, the columns from the 1st to the 10000th are all
+feature variables, and there is no 'celeb' variable.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:17.85pt;text-align:
+left;text-indent:-17.85pt;line-height:150%'><a name="_Toc166767918"><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>2.2<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span lang=EN-US
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Methodologies</span></a></p>
+
+<p class=MsoListParagraph align=left style='margin-left:36.0pt;text-align:left;
+text-indent:-36.0pt;line-height:150%'><a name="_Toc166767919"><span lang=EN-US
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>2.2.1<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Data
+Preprocessing</span></a></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>2.2.1.1
+A data integrity check was conducted on the dataset to identify any missing
+values, outliers, or duplicates. One duplicate row was then deleted. The
+distribution of data for each celebrity was then analyzed.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>2.2.1.2
+Reshape data</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>As
+shown in figure 1, each row of data extracted from the dataset&nbsp;is
+converted&nbsp;into two shapes. The first shape is 100x100x1, representing a
+single-channel grayscale image used in ANN and OpenCV models. The second shape
+is 100x100x3, representing an RGB image used in CNN models. This format is
+ideal for deep learning models, especially convolutional neural networks, as it
+allows them to handle images with color information and complex features. The
+data reshaping is to meet the input requirements of different models, thereby
+enabling them to process and analyze the image data more effectively.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Figure
+1: Data reshaping process</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US><img width=739 height=267
+src="Celebrity%20Classification.files/image001.jpg"
+alt="A diagram of a data flow&#10;&#10;Description automatically generated"></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>2.2.1.3
+Mapping data</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>During
+the model deployment and testing process, the&nbsp;unlabeled dataset is mapped
+into actual image formats.&nbsp;The predicted name results from the model are
+then displayed directly above the images. This process helps visually verify
+the model's predictions.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Figure
+2 shows that the row data&nbsp;is initially reshaped&nbsp;into a 100x100 NumPy
+array, which&nbsp;is then converted&nbsp;into an image.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Figure
+2: Data mapping process</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US><img width=875 height=141
+src="Celebrity%20Classification.files/image002.jpg"
+alt="A diagram of a data flow&#10;&#10;Description automatically generated"></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>2.2.1.4
+Encoding</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>The
+original labels in the dataset are of the string type and must&nbsp;be
+converted&nbsp;into formats suitable for machine learning models.&nbsp;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>We
+utilize the Sparse label&nbsp;encoding method. In this method, category labels
+are represented directly as integers. This approach is highly effective for
+handling large datasets.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:36.0pt;text-align:left;
+text-indent:-36.0pt;line-height:150%'><a name="_Toc166767920"><span lang=EN-US
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>2.2.2<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Data
+Split</span></a></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>The
+100 x 100 unlabelled dataset&nbsp;was divided&nbsp;into the following
+proportions:</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>(1)
+Training set (70%): used for the model training process&nbsp;and contains most
+data&nbsp;to ensure the model has sufficient learning information.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>(2)
+Validation set (20%): used for performance validation during the model training
+process to avoid overfitting.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>(3)
+Test set (10%): used to evaluate the final performance of the model after model
+training is complete.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:36.0pt;text-align:left;
+text-indent:-36.0pt;line-height:150%'><a name="_Toc166767921"><span lang=EN-US
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>2.2.3<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Algorithm
+Description</span></a></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>2.2.3.1
+Artificial Neural Network (ANN)</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Artificial
+Neural Network (ANN) is a computing system. It consists of interconnected units
+or nodes that simulate the human brain's ability to recognize complex patterns
+and relationships in data. They are therefore often used for classification
+tasks.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Figure
+3: ANN Model Architecture</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'><img
+width=775 height=109 src="Celebrity%20Classification.files/image003.jpg"
+alt="A white rectangular object with black text&#10;&#10;Description automatically generated"></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Figure
+3 illustrates the architecture of the ANN employed in this project:</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>The
+input layer: It receives the reshaped image data and prepares it for
+processing.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>The
+Flatten Layer: This process transforms the multi-dimensional image data into a
+one-dimensional array, enabling the extraction of features more efficiently.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Dense
+layers:</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>The
+initial dense layer comprises 3,000 neurons, which are essential for the
+learning of high-level features.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>The
+second dense layer of 1,000 neurons serves to refine these features further.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>The
+output layer: The trained features are then used to classify images by
+celebrity, resulting in the final predictive output.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>2.2.3.2
+Open-source computer vision library (OpenCV)</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>OpenCV
+is an open-source computer vision and machine learning software library. It
+offers a comprehensive range of image processing and recognition algorithms,
+which are well-suited to complex facial recognition tasks.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>This
+study uses OpenCV's Local Binary Patterns Histograms (LBPH) algorithm for face
+recognition tasks. LBPH is a face-recognition algorithm used in image
+processing to identify faces by analyzing simple patterns within the image.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>In
+this project, the LBPH face recognizer&nbsp;is first initialized. The recognizer&nbsp;is
+then trained&nbsp;using a training dataset of labelled face images. This phase
+involves learning the distinctive features of each face that are essential for
+distinguishing between different individuals.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>2.2.3.3
+Convolutional Neural Networks</span><span style='font-size:12.0pt;line-height:
+150%'>（</span><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif'>CNN</span><span style='font-size:12.0pt;
+line-height:150%'>）</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>CNN
+is a deep learning method. By employing convolutional, pooling and fully
+connected layers, CNN can automatically learn and extract meaningful features
+from images. It is a highly effective tool for a range of image-related tasks,
+including classification, object detection and segmentation.&nbsp; </span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Figure
+4: ANN Model Architecture and Optimizer Process</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US><img width=820 height=321
+src="Celebrity%20Classification.files/image004.jpg"
+alt="A diagram of a model architecture&#10;&#10;Description automatically generated"></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>After
+a series of adjustments and optimizations, we selected a specific CNN model, as
+shown in Figure 4. This model's design is centered around two key components:
+the model architecture and model optimization. </span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>(1)
+Model architecture&nbsp; </span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>The
+model architecture&nbsp;was developed&nbsp;using MobileNetV2 as the
+foundational structure, incorporating additional custom layers to enhance
+performance.</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:22.0pt;text-align:left;
+text-indent:-22.0pt;line-height:150%'><span lang=EN-US style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman",serif'>a)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif'>MobileNetV2 </span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>MobileNetV2
+is a convolutional neural network architecture designed for mobile devices. It
+focuses on efficiency and effectiveness in feature extraction.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>In
+this project, MobileNetV2 was selected as the feature extractor. The input
+shape was adjusted to three channels:100x100x3. This adjustment aims to
+leverage MobileNetV2's feature extraction capabilities to their full potential.
+</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Furthermore,
+freezing layers represents a crucial strategy in the model. The initial 40
+layers of the model are frozen to ensure the preservation of the base features
+learned by MobileNetV2. This operation guarantees that these base features will
+not be altered by the training process of the new dataset, enhancing the
+stability and training efficiency of the model. </span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:22.0pt;text-align:left;
+text-indent:-22.0pt;line-height:150%'><span lang=EN-US style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman",serif'>b)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif'>Adding custom layers</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Following
+the implementation of MobileNetV2, several custom layers were added to enhance
+the model's ability to handle specific tasks.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>GlobalAveragePooling2D:
+Used to reduce the number of parameters, simplify the model and reduce the risk
+of overfitting.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Dense
+layer: Contains 128 neurons activated using ReLU, which introduces
+non-linearity to help the model learn complex patterns.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Dropout
+Layer: 50% of neurons are randomly discarded during training to prevent
+overfitting.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Output
+layer: Fully connected layer using a softmax activation function, which
+transforms the input into a probability distribution and calculates the
+probability of each celebrity category.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>(2)
+Model Training Optimization</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>In
+the compiling and fitting session of the CNN model, we used some optimization
+strategies to improve the performance of the model:</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:22.0pt;text-align:left;
+text-indent:-22.0pt;line-height:150%'><span lang=EN-US style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman",serif'>a)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif'>Adam Optimizer: An iterative optimization
+algorithm designed for training deep learning models. It utilizes an adaptive
+learning rate mechanism to converge to optimal solutions efficiently.</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:22.0pt;text-align:left;
+text-indent:-22.0pt;line-height:150%'><span lang=EN-US style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman",serif'>b)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif'>Data Augmentation: The method artificially
+expands the training set by creating modified versions of the images in it. Our
+study augmented the facial dataset with various transformations, including
+rotation, scaling, stretching, and brightness adjustment. These modifications
+help to simulate different viewing conditions, providing a more diverse
+training dataset.</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:22.0pt;text-align:left;
+text-indent:-22.0pt;line-height:150%'><span lang=EN-US style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman",serif'>c)<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif'>Early stopping: Monitors the model's
+performance on the validation set and stops training if the performance does
+not improve after several epochs.&nbsp;This&nbsp;prevents overfitting of the
+training data and saves time and computational resources.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:36.0pt;text-align:left;
+text-indent:-36.0pt;line-height:150%'><a name="_Toc166767922"><span lang=EN-US
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>2.2.4<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Evaluation
+metrics</span></a></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>2.2.4.1
+Precision</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Precision
+measures the proportion of correct predictions for a given class out of all
+predictions made. High image classification precision means fewer non-target
+objects are mistakenly identified as the target class.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>2.2.4.2
+Recall</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Recall
+measures the proportion of actual positives identified correctly by the model
+out of all actual positives. In this project, a higher recall indicates that
+the model effectively captures a larger portion of actual celebrity images.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>2.2.4.3
+F1 score</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>The
+F1 score provides a&nbsp;balanced measure of the model's accuracy and recall.
+In this project, a high F1 score indicates robust and balanced performance in
+identifying celebrity images precisely and comprehensively.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>The
+formula for the F1 score is: </span><span
+lang=EN-US style='font-size:10.5pt;font-family:等线;position:relative;top:11.0pt'><img
+width=163 height=41 src="Celebrity%20Classification.files/image005.png"></span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>)&nbsp;
+</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>2.2.4.4
+Accuracy rate</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Accuracy
+is the ratio of correct predictions to the total number of predictions made. In
+a project identifying 19 celebrities, a high accuracy rate means that the model
+effectively distinguishes and recognizes different celebrity faces.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>2.2.4.5
+Confusion matrix</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>The
+confusion matrix is a table that shows the number of correct and incorrect
+predictions by each category.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>To
+evaluate our model's performance across the 19 celebrity categories, we used a
+confusion matrix to represent the accuracy of the predictions. The diagonal
+items of the matrix represent the correct classification of each category,
+while the off-diagonal items indicate prediction errors, indicating the number
+of times the model incorrectly labelled a category as another.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>2.2.4.6
+Training and validation accuracy curves</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>The
+training and validation accuracy curves demonstrate the model's effectiveness
+in predicting the target variable on the training and validation datasets over
+the epochs. This comparison helps assess the model's performance and its
+ability to generalize to unseen data.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:17.85pt;text-align:
+left;text-indent:-17.85pt;line-height:150%'><a name="_Toc166767923"><b><span
+lang=EN-US style='font-size:14.0pt;line-height:150%;font-family:"Times New Roman",serif'>3.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span></b><b><span
+lang=EN-US style='font-size:14.0pt;line-height:150%;font-family:"Times New Roman",serif'>Result</span></b></a></p>
+
+<p class=MsoListParagraph align=left style='margin-left:17.85pt;text-align:
+left;text-indent:-17.85pt;line-height:150%'><a name="_Toc166767924"><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>3.1<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span lang=EN-US
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Data
+Preprocessing</span></a></p>
+
+<p class=MsoListParagraph align=left style='margin-left:36.0pt;text-align:left;
+text-indent:-36.0pt;line-height:150%'><a name="_Toc166767925"><span lang=EN-US
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>3.1.1<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Data
+clean</span></a></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Figure
+5: Distribution of Data per Celebrity</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'><img
+width=816 height=326 src="Celebrity%20Classification.files/image006.png"></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Figure
+5 illustrates the quantity of image data for each celebrity, demonstrating
+variations between them. Robert Downey Jr. and Alexandra Daddario have the most
+significant number of images, with approximately 220 images each. Conversely,
+Taylor Swift, Emma Stone, Zendaya, and Dwayne Johnson have the lowest data
+volumes, with approximately 120 images each. The discrepancy in data volume
+between the highest and lowest categories is almost twice as significant.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>The
+discrepancy in the data volume may bias our model, which could affect its
+performance in categories with less data.&nbsp;This issue may indicate a
+challenge in model training.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:36.0pt;text-align:left;
+text-indent:-36.0pt;line-height:150%'><a name="_Toc166767926"><span lang=EN-US
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>3.1.2<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Reshaping
+data</span></a></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>To
+meet the input requirements of the model, we reshaped each row of data in the
+table dataset to 100x100x1, meaning that each piece of image data was processed
+as a single-channel (greyscale) image of 100x100 pixels. After processing, we
+took the first data of each celebrity in the table data and did the image
+mapping to preview it. By visualizing the data matrix, we confirmed that the
+conversion was successful.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Figure
+6: Preview of reshaping data after converting to image</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'><img
+width=703 height=564 src="Celebrity%20Classification.files/image007.jpg"></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:17.85pt;text-align:
+left;text-indent:-17.85pt;line-height:150%'><a name="_Toc166767927"><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>3.2<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span lang=EN-US
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Model
+result</span></a></p>
+
+<p class=MsoListParagraph align=left style='margin-left:36.0pt;text-align:left;
+text-indent:-36.0pt;line-height:150%'><a name="_Toc166767928"><span lang=EN-US
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>3.2.1<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>ANN</span></a></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>After
+training the ANN model, it was tested on the test set, achieving a final
+accuracy of 29%. </span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>3.2.1.1
+Precision, recall, F1-score</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Figure
+6 illustrates the precision, recall, and F1-score for each celebrity category
+using the ANN model.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Figure
+7: The precision, recall and F1-score of ANN model</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'><img
+width=696 height=330 src="Celebrity%20Classification.files/image008.png"></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>The
+figure illustrates a considerable variation in recall and precision among
+celebrities. Taylor Swift has a higher recall rate than the average celebrity
+but a lower precision rate. This indicates that while the model can identify most
+images of Taylor Swift, it also incorrectly classifies other celebrities as
+her, resulting in a higher number of false positives.&nbsp;This&nbsp;may be due
+to the learning of over-generalized features for this category. These features
+lack sufficient distinction to differentiate accurately between individuals
+with similar appearances.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>On
+the other hand, celebrities such as Amber Heard, Emma Stone, Anne Hathaway,
+Jason Momoa, and Tom Holland showed high precision but low recall, suggesting
+that the model was more conservative in predicting these categories
+conservatively, missing many true positives.&nbsp;This&nbsp;may mean that the
+model&nbsp;is too strict&nbsp;in identifying these categories.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Margot
+Robbie has the highest&nbsp;F1 score, indicating that the model achieves a good
+balance between precision and recall for this celebrity.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>3.2.1.2
+Confusion matrix</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Figure
+8: The confusion matrix of ANN model</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'><img
+width=645 height=557 src="Celebrity%20Classification.files/image009.jpg"></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Further
+analysis of the confusion matrix revealed that many of the celebrity images
+were misidentified as Taylor Swift and Alexandra Daddario. This suggests that
+the features learnt by the model from these two individuals may be too dominant
+or generic. This causes the model to be prone to misclassification when
+confronted with other celebrities with similar features.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>On
+the diagonal, Emma Stone had the lowest value of 1, meaning that the model had
+great difficulty correctly recognizing images of her. This low accuracy
+suggests that the model may not be capturing the unique features needed to
+distinguish her accurately or that there is insufficient training data for this
+category.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>3.2.1.3
+Training, validation, and test accuracy</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Figure
+9: Training, Validation, and Test Accuracy (ANN)</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'><img
+width=669 height=349 src="Celebrity%20Classification.files/image010.jpg"
+alt="A graph with a line and a line&#10;&#10;Description automatically generated"></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>As
+illustrated in Figure 9, the significant gap between the training and
+validation accuracy levels indicates overfitting.&nbsp;While the model performs
+well on the training data, it&nbsp;struggles&nbsp;to generalize to the
+validation data.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Furthermore,
+the relatively low and fluctuating validation accuracy and the stable but low
+test accuracy suggest that the model&nbsp;is
+not&nbsp;generalizing&nbsp;well&nbsp;to new data.&nbsp;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:36.0pt;text-align:left;
+text-indent:-36.0pt;line-height:150%'><a name="_Toc166767929"><span lang=EN-US
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>3.2.2<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>OpenCV</span></a></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>After
+testing the OpenCV model on a test set, it achieved a final accuracy of 43%.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>3.2.2.1
+Precision, recall, F1-score</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Figure
+10: The precision, recall and F1-score of OpenCV model</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'><img
+width=684 height=297 src="Celebrity%20Classification.files/image011.png"></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>As
+can be seen from the figure 10, there is not a large difference between
+precision and recall for most celebrities, which suggests that the model
+performs relatively evenly across the different celebrity categories.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>However,
+Chris Pratt precision is much larger than the recall, this suggests that the
+model is usually accurate when predicting as Chris Pratt but misses many true
+cases.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Looking
+at the F1 scores, there is not much variation in values across celebrities,
+with the highest being Emma Watson, Margot Robbie, and Robert Downey Jr,
+suggesting that the categories of these celebrities achieve a better balance
+between precision and recall.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>3.2.2.2
+Confusion matrix</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Figure
+11: The confusion matrix of OpenCV model</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'><img
+width=690 height=600 src="Celebrity%20Classification.files/image012.jpg"></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Further
+analysis of the confusion matrix indicates that Alexandra Daddario, Robert
+Downey Jr. and Emma Watson have the highest values on the diagonal, suggesting
+that the model can recognize these celebrities with high accuracy. Conversely,
+Dwayne Johnson has the lowest value on the diagonal, indicating that the model
+has difficulty accurately recognizing him.&nbsp;This&nbsp;may be due to the
+model capturing&nbsp;fewer&nbsp;features or the training data&nbsp;being
+under-representative.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Tom
+Hollander and Emma Stone were frequently misidentified as other celebrities in
+the non-diagonal region, with a relatively even distribution across
+categories.&nbsp;This&nbsp;indicates that the model cannot distinguish between
+their features and those of other celebrities.&nbsp;This&nbsp;may be due to the
+model&nbsp;failing&nbsp;to capture their distinctive features effectively.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>OpenCV
+shows lower false recognition values in the confusion matrix's non-diagonal
+region than in the ANN model. This suggests that the OpenCV model may have
+better feature discrimination ability when dealing with the face recognition
+task. In contrast, ANN may have some limitations in feature extraction and
+classification of categories, resulting in higher false recognition rates
+between certain celebrities.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>3.2.2.3
+Training, validation, and test accuracy</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>In
+OpenCV, the LBPH FaceRecognizer does not involve an iterative training process
+over multiple epochs. As a result, it is impossible to record training and
+validation accuracy for each epoch. Consequently, there is no concept of
+plotting training, validation, and test accuracy graphs for the OpenCV model.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:36.0pt;text-align:left;
+text-indent:-36.0pt;line-height:150%'><a name="_Toc166767930"><span lang=EN-US
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>3.2.3<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>CNN</span></a></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>3.2.3.1
+Precision, recall, F1-score</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>The
+third method&nbsp;is based&nbsp;on CNN. The initial CNN model achieved an
+accuracy of 47%, higher than the ANN and OpenCV-based models. Building on this
+initial success, we optimized the CNN model further. The accuracy of our CNN
+model improved significantly, reaching approximately 78%.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Figure
+12: The precision, recall and F1-score of CNN model</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'><img
+width=732 height=344 src="Celebrity%20Classification.files/image013.png"></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>The
+figure 12 illustrates that the differences between precision and recall are
+relatively insignificant for most celebrities. In summary, all three metrics –
+precision, recall and F1-score – demonstrate superior performance compared to
+the ANN and OpenCV models.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>These
+results also show that Emma Stone's recall and precision are below average,
+with recall being particularly poor.&nbsp;This&nbsp;indicates that the model
+has significant difficulty correctly recognizing images of Emma Stone.&nbsp;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>3.2.3.2
+Confusion matrix</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Figure
+13: The confusion matrix of CNN model</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'><img
+width=703 height=625 src="Celebrity%20Classification.files/image014.jpg"></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>As
+shown in Figure 13, the high diagonal values indicate that most of the
+predictions are correct. It is worth noting that Emma Stone has a significantly
+lower diagonal value, which is consistent with the observation in Figure 11. In
+addition, we find a high misclassification between Emma Stone and Emma Watson,
+which may indicate that the model is having difficulty distinguishing between
+these two celebrities. This situation may be due to the failure of the model to
+capture the key features that distinguish these two celebrities.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>3.2.3.3
+Training, validation, and test accuracy</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Figure
+14: Training, Validation, and Test Accuracy (CNN)</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'><img
+width=727 height=381 id="Picture 1"
+src="Celebrity%20Classification.files/image015.jpg"
+alt="A graph showing the growth of a number of people&#10;&#10;Description automatically generated"></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Figure
+14 demonstrates the excellent performance of the CNN model on the training,
+validation, and test sets. The gradual increase in training and validation
+accuracy shows that the model is constantly learning and optimizing. The test
+accuracy is close to the validation accuracy. It reaches a value of almost 80%,
+indicating that the model has good generalization ability and can maintain high
+accuracy on new data.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:17.85pt;text-align:
+left;text-indent:-17.85pt;line-height:150%'><a name="_Toc166767931"><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>3.3<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span lang=EN-US
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Models
+Performance Comparison</span></a></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Figure
+15: Model comparison</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'><img
+width=738 height=324 id="Chart 1"
+src="Celebrity%20Classification.files/image016.png"></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>As
+shown in figure 15, the ANN model demonstrated precision&nbsp;and recall at
+0.33 and 0.29, respectively, with an F1 score and an accuracy of approximately
+0.28. indicating struggles with false positives and negatives. The OpenCV-based
+model shows improvement, with all metrics around 0.43, suggesting fewer errors
+and a more balanced performance.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>The
+CNN model significantly outperformed both the ANN and OpenCV models, with
+precision, recall, F1-score, and accuracy at levels of 0.81, 0.78, 0.78, and
+0.78, respectively.&nbsp;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Overall,
+the CNN model performed excellent on all metrics compared to the ANN and OpenCV
+models. It obtained the highest precision, recall, F1 score and accuracy
+scores, making it the most efficient and reliable model for this image
+recognition task.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:17.85pt;text-align:
+left;text-indent:-17.85pt;line-height:150%'><a name="_Toc166767932"><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>3.4<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span lang=EN-US
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Model
+Implementation</span></a></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Following
+the evaluation of three models, the CNN model was selected as the most suitable
+implementation.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>From
+the unlabelled dataset, we select the top 50 data for the prediction test.
+First, these 50 data are converted into images, and then the trained model is
+used for celebrity face recognition. The predicted name is displayed on top of
+the image. In this way, we have visualized the prediction results.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Figure
+16: Convert data results to images for preview after prediction on unlabelled
+dataset</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'><img
+width=689 height=345 id="Picture 3"
+src="Celebrity%20Classification.files/image017.jpg"
+alt="A collage of a group of people&#10;&#10;Description automatically generated"></span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>From
+the visualization of the results, we can see that out of these 50 characters,
+10 people were incorrectly predicted. The accuracy of this prediction is
+therefore 80%. Additionally, we verified the predicted labels for the first 190
+individuals in the unlabeled dataset, resulting in an accuracy of 77.4%.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>In
+conclusion, the model demonstrated an approximate accuracy of 77% in practical
+applications. This indicates that the model has a high accuracy in practical
+applications.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:17.85pt;text-align:
+left;text-indent:-17.85pt;line-height:150%'><a name="_Toc166767933"><b><span
+lang=EN-US style='font-size:14.0pt;line-height:150%;font-family:"Times New Roman",serif'>4.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span></b><b><span
+lang=EN-US style='font-size:14.0pt;line-height:150%;font-family:"Times New Roman",serif'>Discussion</span></b></a></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>This
+study demonstrates the outstanding&nbsp;performance of CNN in image recognition
+tasks and reflects some valuable insights gained from different modelling
+approaches.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Firstly,
+this study has found that CNN perform best in facial recognition tasks. This
+advantage is primarily due to their strength in feature extraction, a crucial
+aspect of image classification tasks. Structurally, CNN contain convolutional
+layers that efficiently capture spatial hierarchies in images.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Secondly,
+from the performance of the three models, we found that Taylor Swift, Emma
+Stone, Zendaya and Dwayne Johnson performed worse. This could be because these
+celebrities had less data in the training set. The limited data makes it
+difficult for the model to learn their unique features efficiently, resulting
+in lower precision, recall and overall accuracy for these categories.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Therefore,
+it is concluded that the amount of training data plays a crucial role in the
+model's ability to classify images accurately.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Thirdly,
+the final CNN model's performance enhancements resulted from several optimizations.
+We employed data augmentation techniques to artificially increase the diversity
+of the training data, which helped the model generalize better. Additionally,
+we used freezing layers to retain the valuable low-level features learned from
+the MobileNetV2, which served as a feature extractor. These steps collectively
+led to a significant improvement in the CNN model's performance.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Finally,
+while CNN has demonstrated impressive performance in the face recognition task,
+we are optimistic about the potential for further enhancements.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>To
+begin with, we can include a procedure to locate the face in the image before recognizing
+it. Once a face is detected, the system can automatically crop out the face
+region from the entire picture and analyze only this part. This step allows
+subsequent recognition algorithms to focus on the face region, thus
+significantly reducing the interference of background noise and improving
+recognition accuracy</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>(Jayapradha
+et al., 2024)</span><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif'>.&nbsp;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Moreover,
+multiple different models can be integrated for learning, which can improve the
+system's robustness and accuracy. For example, the prediction results of
+multiple CNN models based on different architectures can be integrated to
+improve the overall recognition effect by voting or averaging.&nbsp;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Additionally,
+the diversity and scale of datasets can be expanded. For instance, using web
+crawlers&nbsp;to automatically collect more images of celebrities from the
+Internet&nbsp;can result in more abundant training data, which can assist the
+model in learning and generalizing more effectively.&nbsp;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Furthermore,
+by extending the application scenarios, we can move from binary classification
+to multi-classification tasks, identifying not only celebrities in images but
+also their specific activities or emotional states. This extension not only
+improves the system's utility but also enables it to be useful in a wider range
+of application scenarios.</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoListParagraph align=left style='margin-left:17.85pt;text-align:
+left;text-indent:-17.85pt;line-height:150%'><a name="_Toc166767934"><b><span
+lang=EN-US style='font-size:14.0pt;line-height:150%;font-family:"Times New Roman",serif'>5.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp; </span></span></b><b><span
+lang=EN-US style='font-size:14.0pt;line-height:150%;font-family:"Times New Roman",serif'>Conclusion</span></b></a></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>This
+study aimed to achieve classification predictions for 19 specified celebrities
+based on input image data. We investigated three models, ANN, CNN, and OpenCV,
+respectively, and found that CNN performed best on all metrics. This result
+confirms the effectiveness of convolutional neural networks in face recognition
+tasks, especially when dealing with complex image data.&nbsp;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<span lang=EN-US style='font-size:12.0pt;font-family:"Times New Roman",serif'><br
+clear=all style='page-break-before:always'>
+</span>
+
+<p class=MsoNormal align=left style='text-align:left'><span lang=EN-US
+style='font-size:12.0pt;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><a
+name="_Toc166767935"><b><span lang=EN-US style='font-size:14.0pt;line-height:
+150%;font-family:"Times New Roman",serif'>Reference</span></b></a></p>
+
+<p class=MsoBibliography align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Belhumeur,
+P. N., Hespanha, J. P., &amp; Kriegman, D. J. (1997). Eigenfaces vs.
+Fisherfaces: Recognition Using Class Specific Linear Projection. <i>IEEE
+TRANSACTIONS ON PATTERN ANALYSIS AND MACHINE INTELLIGENCE</i>, <i>19</i>(7).</span></p>
+
+<p class=MsoBibliography align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Han,
+S., Gao, Q., Wang, C., &amp; Zou, J. (2021). Animal face classification based
+on deep learning. <i>2021 2nd International Conference on Big Data &amp;
+Artificial Intelligence &amp; Software Engineering (ICBASE)</i>, 324–330. https://doi.org/10.1109/ICBASE53849.2021.00067</span></p>
+
+<p class=MsoBibliography align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Jayapradha,
+M. J., Kalam, S. A., Coumar, M. D., &amp; Vignesh, S. (2024). Face Detection
+Attendance System Using Transfer Learning And Deep Neural Network. <i>Educational
+Administration: Theory and Practice</i>, <i>30</i>(5), Article 5.
+https://doi.org/10.53555/kuey.v30i5.3463</span></p>
+
+<p class=MsoBibliography align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Kaur,
+H., &amp; Mirza, A. (2021, March 11). <i>Face Detection Using Haar Cascades
+Classifier</i>. Proceedings of the 2nd International Conference on ICT for
+Digital, Smart, and Sustainable Development, ICIDSSD 2020, 27-28 February 2020,
+Jamia Hamdard, New Delhi, India.
+https://eudl.eu/doi/10.4108/eai.27-2-2020.2303218</span></p>
+
+<p class=MsoBibliography align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Kshirsagar,
+V. P., Baviskar, M. R., &amp; Gaikwad, M. E. (2011). Face recognition using
+Eigenfaces. <i>2011 3rd International Conference on Computer Research and
+Development</i>, 302–306. https://doi.org/10.1109/ICCRD.2011.5764137</span></p>
+
+<p class=MsoBibliography align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Liu,
+Y., Pu, H., &amp; Sun, D.-W. (2021). Efficient extraction of deep image
+features using convolutional neural network (CNN) for applications in detecting
+and analysing complex food matrices. <i>Trends in Food Science &amp; Technology</i>,
+<i>113</i>, 193–204. https://doi.org/10.1016/j.tifs.2021.04.042</span></p>
+
+<p class=MsoBibliography align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Mohan
+Katta, L. (2023). FACE RECOGNITION ATTENDANCE SYSTEM USING LBPH ALGORITHM. <i>INTERNATIONAL
+JOURNAL OF SCIENTIFIC RESEARCH</i>, 52–53.
+https://doi.org/10.36106/ijsr/3556592</span></p>
+
+<p class=MsoBibliography align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Rifaee,
+M., Al Rawajbeh, M., Alokosh, B., Abdel Fattah, F., &amp; Fattah. (2022). A New
+approach to Recognize Human Face Under Unconstrained Environment. <i>International
+Journal of Advances in Soft Computing and Its Applications</i>, <i>14</i>,
+1–13. https://doi.org/10.15849/IJASCA.220720.01</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+</div>
+
+</body>
+
+</html>
