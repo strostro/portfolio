@@ -1,0 +1,2880 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:宋体;
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:等线;
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+@font-face
+	{font-family:"\@等线";
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+@font-face
+	{font-family:"\@宋体";
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:10.5pt;
+	font-family:等线;}
+p
+	{margin-right:0cm;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:宋体;}
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+	{margin:0cm;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:21.0pt;
+	font-size:10.5pt;
+	font-family:等线;}
+p.MsoBibliography, li.MsoBibliography, div.MsoBibliography
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:36.0pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:-36.0pt;
+	line-height:200%;
+	font-size:10.5pt;
+	font-family:等线;}
+.MsoChpDefault
+	{font-size:10.5pt;}
+ /* Page Definitions */
+ @page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:70.9pt 70.9pt 70.9pt 70.9pt;
+	layout-grid:15.6pt;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+
+</head>
+
+<body lang=ZH-CN link="#0563C1" vlink="#954F72" style='word-wrap:break-word;
+text-justify-trim:punctuation'>
+
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:150%'><b><span
+lang=EN-US style='font-size:18.0pt;line-height:150%;font-family:"Times New Roman",serif'>Exploring
+Work-Life Balance Indicators with </span></b></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:150%'><b><span
+lang=EN-US style='font-size:18.0pt;line-height:150%;font-family:"Times New Roman",serif'>Multivariate
+Analysis Techniques</span></b></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:150%'><b><span
+lang=EN-US style='font-size:18.0pt;line-height:150%;font-family:"Times New Roman",serif'>&nbsp;</span></b></p>
+
+<p class=MsoNormal style='line-height:150%'><a name="_Toc167893356"><b><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Executive
+summary</span></b></a></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:#0E101A'>This project uses different multivariate analysis techniques to
+explore factors influencing work-life balance indicators.</span></p>
+
+<ul style='margin-top:0cm' type=disc>
+ <li class=MsoNormal style='color:#0E101A;text-align:left;line-height:150%'><span
+     lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Principal
+     component analysis explores how different variables contribute to the
+     variance of the work-life balance score. </span></li>
+ <li class=MsoNormal style='color:#0E101A;text-align:left;line-height:150%'><span
+     lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Factor
+     analysis further explores the latent factors underlying the independent
+     variables.</span></li>
+ <li class=MsoNormal style='color:#0E101A;text-align:left;line-height:150%'><span
+     lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Cluster
+     analysis helps to identify patterns and groupings between variables.</span></li>
+ <li class=MsoNormal style='color:#0E101A;text-align:left;line-height:150%'><span
+     lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Correspondence
+     analysis explores potential trends in work-life balance scores across
+     different demographic groups. </span></li>
+ <li class=MsoNormal style='color:#0E101A;text-align:left;line-height:150%'><span
+     lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Canonical
+     Correlation Analysis reveals the relationships between different variable
+     sets and their mutual influences. </span></li>
+ <li class=MsoNormal style='color:#0E101A;text-align:left;line-height:150%'><span
+     lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>PLS
+     regression identifies the most influential variables in predicting
+     work-life balance scores.</span></li>
+</ul>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:#0E101A'>By integrating these analytical techniques, this project aims to
+comprehensively understand the factors that shape work-life balance, providing
+valuable insights for individuals, organizations and policymakers seeking to
+improve overall well-being.</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoListParagraph style='margin-left:18.0pt;text-indent:-18.0pt;
+line-height:150%'><a name="_Toc167893357"><b><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>1.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span></b><b><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Introduction</span></b></a></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>This project aims
+to explore different aspects that influence work-life balance indicators.
+Previous studies have primarily focused on aspects of work-life balance, such
+as compensation, workload</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>(S.
+N. B. Navarro, 2018)</span><span lang=EN-US style='font-size:12.0pt;line-height:
+150%;font-family:"Times New Roman",serif'>, or remote working</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>(Nopdanai,
+2021)</span><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif'>, without integrating a broader range of
+influencing factors. </span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>This study aims to
+fill this gap using multivariate analysis techniques by examining how different
+aspects of an individual's life affect work-life balance. The factors examined
+cover five domains: ‘Healthy Body’, ‘Healthy Mind’, ‘Expertise’, ‘Connection’,
+and ‘Meaning’. Understanding these factors can support effective interventions
+that improve quality of life and productivity.</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoListParagraph style='margin-left:18.0pt;text-indent:-18.0pt;
+line-height:150%'><a name="_Toc167893358"><b><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>2.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span></b><b><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Materials
+and Methodologies</span></b></a></p>
+
+<p class=MsoListParagraph style='margin-left:18.0pt;text-indent:-18.0pt;
+line-height:150%'><a name="_Toc167893359"><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>2.1<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span lang=EN-US
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Materials</span></a><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>
+</span></p>
+
+<p class=MsoListParagraph style='margin-left:36.0pt;text-indent:-36.0pt;
+line-height:150%'><a name="_Toc167893360"><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>2.1.1<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Dataset
+Description</span></a></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>The dataset for
+this project is a collection of responses from www.Authentic-Happiness.com.
+Data from a study evaluates how individuals shape their lifestyles, habits, and
+behaviors to optimize overall life satisfaction.</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>The dataset
+initially had 15,972 samples, from which 500 were selected for analysis.</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Looking at Figure
+1, the sample of respondents has slightly fewer men than women. Regarding age
+distribution, the most significant number of respondents is in the 21-35 age
+group, with the smallest proportion in the under-20 age group.</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Figure 1: Sample
+distribution of respondents</span></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'><img
+width=507 height=381 id="Picture 5"
+src="MultivariateAnalysis.files/image001.jpg"
+alt="A graph of age and gender&#10;&#10;Description automatically generated"></span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoListParagraph style='margin-left:36.0pt;text-indent:-36.0pt;
+line-height:150%'><a name="_Toc167893361"><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>2.1.2<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Variable
+Description</span></a></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>As shown in Table
+1, this dataset contains 20 independent variables grouped into five categories:</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>(1)&nbsp; Healthy
+body</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>(2)&nbsp; Healthy
+mind</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>(3)&nbsp;
+Expertise: measuring the ability to grow one’s knowledge and achieve something
+unique</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>(4)&nbsp;
+Connection: assessing the strength of one’s social network and your inclination
+to discover the world</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>(5)&nbsp; Meaning,
+evaluating one’s compassion, generosity</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>In addition, the
+'WORK_LIFE_BALANCE_SCORE', which ranges from 500 to 800, is used as an
+indicator to measure work-life balance. This indicator is calculated by an
+algorithm using the 20 independent variables. </span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Basic variables
+such as age and gender, as well as timestamps indicating when the questionnaire
+was completed, are also included in the dataset.</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Table 1: Variable
+Definition</span></p>
+
+<div align=center>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width=614
+ style='width:460.45pt;border-collapse:collapse'>
+ <tr style='height:15.5pt'>
+  <td width=104 style='width:77.75pt;border:solid windowtext 1.0pt;background:
+  white;padding:0cm 5.4pt 0cm 5.4pt;height:15.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><b><span
+  lang=EN-US style='font-size:11.0pt;line-height:150%;font-family:"Times New Roman",serif;
+  color:black'>Segment</span></b></p>
+  </td>
+  <td width=132 style='width:98.85pt;border:solid windowtext 1.0pt;border-left:
+  none;background:white;padding:0cm 5.4pt 0cm 5.4pt;height:15.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><b><span
+  lang=EN-US style='font-size:11.0pt;line-height:150%;font-family:"Times New Roman",serif;
+  color:black'>Variable Name </span></b></p>
+  </td>
+  <td width=378 style='width:283.85pt;border:solid windowtext 1.0pt;border-left:
+  none;background:white;padding:0cm 5.4pt 0cm 5.4pt;height:15.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><b><span
+  lang=EN-US style='font-size:11.0pt;line-height:150%;font-family:"Times New Roman",serif;
+  color:black'>Definition</span></b></p>
+  </td>
+ </tr>
+ <tr style='height:15.5pt'>
+  <td width=104 rowspan=2 style='width:77.75pt;border:solid windowtext 1.0pt;
+  border-top:none;background:white;padding:0cm 5.4pt 0cm 5.4pt;height:15.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><b><span
+  lang=EN-US style='font-size:11.0pt;line-height:150%;font-family:"Times New Roman",serif;
+  color:black'>Metadata</span></b></p>
+  </td>
+  <td width=132 style='width:98.85pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  background:white;padding:0cm 5.4pt 0cm 5.4pt;height:15.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:11.0pt;line-height:150%;font-family:"Times New Roman",serif;
+  color:#0D0D0D'>TIMESTAMP</span></p>
+  </td>
+  <td width=378 style='width:283.85pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  background:white;padding:0cm 5.4pt 0cm 5.4pt;height:15.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:11.0pt;line-height:150%;font-family:"Times New Roman",serif;
+  color:black'>Date when survey was completed</span></p>
+  </td>
+ </tr>
+ <tr style='height:15.5pt'>
+  <td width=132 style='width:98.85pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  background:white;padding:0cm 5.4pt 0cm 5.4pt;height:15.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:11.0pt;line-height:150%;font-family:"Times New Roman",serif;
+  color:#0D0D0D'>ID</span></p>
+  </td>
+  <td width=378 style='width:283.85pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  background:white;padding:0cm 5.4pt 0cm 5.4pt;height:15.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:11.0pt;line-height:150%;font-family:"Times New Roman",serif;
+  color:black'>[1 to 500]</span></p>
+  </td>
+ </tr>
+ <tr style='height:28.0pt'>
+  <td width=104 rowspan=2 style='width:77.75pt;border:solid windowtext 1.0pt;
+  border-top:none;background:white;padding:0cm 5.4pt 0cm 5.4pt;height:28.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><b><span
+  lang=EN-US style='font-size:11.0pt;line-height:150%;font-family:"Times New Roman",serif;
+  color:black'>Demographic</span></b></p>
+  </td>
+  <td width=132 style='width:98.85pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  background:white;padding:0cm 5.4pt 0cm 5.4pt;height:28.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:11.0pt;line-height:150%;font-family:"Times New Roman",serif;
+  color:black'>age</span></p>
+  </td>
+  <td width=378 style='width:283.85pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  background:white;padding:0cm 5.4pt 0cm 5.4pt;height:28.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:11.0pt;line-height:150%;font-family:"Times New Roman",serif;
+  color:black'>Age range: <br>
+  &nbsp;'less than 20', '21 to 35', '36 to 50', '51 or more’</span></p>
+  </td>
+ </tr>
+ <tr style='height:15.5pt'>
+  <td width=132 style='width:98.85pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  background:white;padding:0cm 5.4pt 0cm 5.4pt;height:15.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:11.0pt;line-height:150%;font-family:"Times New Roman",serif;
+  color:black'>gender</span></p>
+  </td>
+  <td width=378 style='width:283.85pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  background:white;padding:0cm 5.4pt 0cm 5.4pt;height:15.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:11.0pt;line-height:150%;font-family:"Times New Roman",serif;
+  color:black'>‘Male’ or ‘Female’</span></p>
+  </td>
+ </tr>
+ <tr style='height:42.0pt'>
+  <td width=104 rowspan=2 style='width:77.75pt;border:solid windowtext 1.0pt;
+  border-top:none;background:white;padding:0cm 5.4pt 0cm 5.4pt;height:42.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><b><span
+  lang=EN-US style='font-size:11.0pt;line-height:150%;font-family:"Times New Roman",serif;
+  color:black'>Target Variable</span></b></p>
+  </td>
+  <td width=132 style='width:98.85pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  background:white;padding:0cm 5.4pt 0cm 5.4pt;height:42.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:11.0pt;line-height:150%;font-family:"Times New Roman",serif;
+  color:black'>WORK_LIFE_BALANCE_SCORE</span></p>
+  </td>
+  <td width=378 style='width:283.85pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  background:white;padding:0cm 5.4pt 0cm 5.4pt;height:42.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:11.0pt;line-height:150%;font-family:"Times New Roman",serif;
+  color:black'>calculated based on an algorithm for five categories(Healthy
+  Body, Healthy Mind, Connection, Expertise,Meaning)</span></p>
+  </td>
+ </tr>
+ <tr style='height:42.0pt'>
+  <td width=132 style='width:98.85pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  background:white;padding:0cm 5.4pt 0cm 5.4pt;height:42.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:11.0pt;line-height:150%;font-family:"Times New Roman",serif;
+  color:black'>score_level</span></p>
+  </td>
+  <td width=378 style='width:283.85pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  background:white;padding:0cm 5.4pt 0cm 5.4pt;height:42.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:11.0pt;line-height:150%;font-family:"Times New Roman",serif;
+  color:black'>According to the WORK_LIFE_BALANCE_SCORE, the sample was divided
+  into six levels (from 1 to 6). Each level represents a different work-life
+  balance.</span></p>
+  </td>
+ </tr>
+ <tr style='height:22.45pt'>
+  <td width=104 rowspan=4 style='width:77.75pt;border:solid windowtext 1.0pt;
+  border-top:none;background:white;padding:0cm 5.4pt 0cm 5.4pt;height:22.45pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><b><span
+  lang=EN-US style='font-size:11.0pt;line-height:150%;font-family:"Times New Roman",serif;
+  color:black'>Healthy Body</span></b></p>
+  </td>
+  <td width=132 style='width:98.85pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  background:white;padding:0cm 5.4pt 0cm 5.4pt;height:22.45pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:11.0pt;line-height:150%;font-family:"Times New Roman",serif;
+  color:black'>fruits_veggies</span></p>
+  </td>
+  <td width=378 style='width:283.85pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  background:white;padding:0cm 5.4pt 0cm 5.4pt;height:22.45pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:11.0pt;line-height:150%;font-family:"Times New Roman",serif;
+  color:black'>How many fruits or vegetables do you eat every day? [1 to 5]</span></p>
+  </td>
+ </tr>
+ <tr style='height:28.0pt'>
+  <td width=132 style='width:98.85pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  background:white;padding:0cm 5.4pt 0cm 5.4pt;height:28.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:11.0pt;line-height:150%;font-family:"Times New Roman",serif;
+  color:black'>bmi_range</span></p>
+  </td>
+  <td width=378 style='width:283.85pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  background:white;padding:0cm 5.4pt 0cm 5.4pt;height:28.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:11.0pt;line-height:150%;font-family:"Times New Roman",serif;
+  color:black'>What is your body mass index (BMI) range?[1 if below 25, else 2]</span></p>
+  </td>
+ </tr>
+ <tr style='height:28.0pt'>
+  <td width=132 style='width:98.85pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  background:white;padding:0cm 5.4pt 0cm 5.4pt;height:28.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:11.0pt;line-height:150%;font-family:"Times New Roman",serif;
+  color:black'>daily_steps</span></p>
+  </td>
+  <td width=378 style='width:283.85pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  background:white;padding:0cm 5.4pt 0cm 5.4pt;height:28.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:11.0pt;line-height:150%;font-family:"Times New Roman",serif;
+  color:black'>How many steps (in thousands) do you typically walk every day [0
+  to 10]</span></p>
+  </td>
+ </tr>
+ <tr style='height:28.0pt'>
+  <td width=132 style='width:98.85pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  background:white;padding:0cm 5.4pt 0cm 5.4pt;height:28.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:11.0pt;line-height:150%;font-family:"Times New Roman",serif;
+  color:black'>sleep_hours</span></p>
+  </td>
+  <td width=378 style='width:283.85pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  background:white;padding:0cm 5.4pt 0cm 5.4pt;height:28.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:11.0pt;line-height:150%;font-family:"Times New Roman",serif;
+  color:black'>About how long you typically sleep over a typical working week,
+  including weekends?[0 to 10]</span></p>
+  </td>
+ </tr>
+ <tr style='height:21.0pt'>
+  <td width=104 rowspan=4 style='width:77.75pt;border:solid windowtext 1.0pt;
+  border-top:none;background:white;padding:0cm 5.4pt 0cm 5.4pt;height:21.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><b><span
+  lang=EN-US style='font-size:11.0pt;line-height:150%;font-family:"Times New Roman",serif;
+  color:#0D0D0D'>Healthy Mind</span></b></p>
+  </td>
+  <td width=132 style='width:98.85pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  background:white;padding:0cm 5.4pt 0cm 5.4pt;height:21.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:11.0pt;line-height:150%;font-family:"Times New Roman",serif;
+  color:black'>daily_stress</span></p>
+  </td>
+  <td width=378 style='width:283.85pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  background:white;padding:0cm 5.4pt 0cm 5.4pt;height:21.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:11.0pt;line-height:150%;font-family:"Times New Roman",serif;
+  color:black'>How much stress do you typically experience every day?[0 to 10]</span></p>
+  </td>
+ </tr>
+ <tr style='height:28.0pt'>
+  <td width=132 style='width:98.85pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  background:white;padding:0cm 5.4pt 0cm 5.4pt;height:28.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:11.0pt;line-height:150%;font-family:"Times New Roman",serif;
+  color:black'>flow</span></p>
+  </td>
+  <td width=378 style='width:283.85pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  background:white;padding:0cm 5.4pt 0cm 5.4pt;height:28.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:11.0pt;line-height:150%;font-family:"Times New Roman",serif;
+  color:black'>In a typical day, how many hours do you experience
+  &quot;flow&quot;?</span></p>
+  </td>
+ </tr>
+ <tr style='height:28.0pt'>
+  <td width=132 style='width:98.85pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  background:white;padding:0cm 5.4pt 0cm 5.4pt;height:28.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:11.0pt;line-height:150%;font-family:"Times New Roman",serif;
+  color:black'>weekly_meditation</span></p>
+  </td>
+  <td width=378 style='width:283.85pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  background:white;padding:0cm 5.4pt 0cm 5.4pt;height:28.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:11.0pt;line-height:150%;font-family:"Times New Roman",serif;
+  color:black'>In a typical week, how many times do you have the opportunity to
+  think about yourself?[0 to 10]</span></p>
+  </td>
+ </tr>
+ <tr style='height:28.0pt'>
+  <td width=132 style='width:98.85pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  background:white;padding:0cm 5.4pt 0cm 5.4pt;height:28.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:11.0pt;line-height:150%;font-family:"Times New Roman",serif;
+  color:black'>daily_shouting</span></p>
+  </td>
+  <td width=378 style='width:283.85pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  background:white;padding:0cm 5.4pt 0cm 5.4pt;height:28.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:11.0pt;line-height:150%;font-family:"Times New Roman",serif;
+  color:black'>How often do you shout or sulk at somebody in a typical week?[0
+  to 10]</span></p>
+  </td>
+ </tr>
+ <tr style='height:28.0pt'>
+  <td width=104 rowspan=4 style='width:77.75pt;border:solid windowtext 1.0pt;
+  border-top:none;background:white;padding:0cm 5.4pt 0cm 5.4pt;height:28.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><b><span
+  lang=EN-US style='font-size:11.0pt;line-height:150%;font-family:"Times New Roman",serif;
+  color:black'>Connection</span></b></p>
+  </td>
+  <td width=132 style='width:98.85pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  background:white;padding:0cm 5.4pt 0cm 5.4pt;height:28.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:11.0pt;line-height:150%;font-family:"Times New Roman",serif;
+  color:black'>places_visited</span></p>
+  </td>
+  <td width=378 style='width:283.85pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  background:white;padding:0cm 5.4pt 0cm 5.4pt;height:28.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:11.0pt;line-height:150%;font-family:"Times New Roman",serif;
+  color:black'>How many new places do you visit over 12 months?[0 to 10]</span></p>
+  </td>
+ </tr>
+ <tr style='height:15.5pt'>
+  <td width=132 style='width:98.85pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  background:white;padding:0cm 5.4pt 0cm 5.4pt;height:15.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:11.0pt;line-height:150%;font-family:"Times New Roman",serif;
+  color:black'>core_circle</span></p>
+  </td>
+  <td width=378 style='width:283.85pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  background:white;padding:0cm 5.4pt 0cm 5.4pt;height:15.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:11.0pt;line-height:150%;font-family:"Times New Roman",serif;
+  color:black'>How many people are very close to you?[0 to 10]</span></p>
+  </td>
+ </tr>
+ <tr style='height:28.0pt'>
+  <td width=132 style='width:98.85pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  background:white;padding:0cm 5.4pt 0cm 5.4pt;height:28.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:11.0pt;line-height:150%;font-family:"Times New Roman",serif;
+  color:black'>supporting_others</span></p>
+  </td>
+  <td width=378 style='width:283.85pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  background:white;padding:0cm 5.4pt 0cm 5.4pt;height:28.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:11.0pt;line-height:150%;font-family:"Times New Roman",serif;
+  color:black'>How many people do you help achieve a better life over 12
+  months?[0 to 10]</span></p>
+  </td>
+ </tr>
+ <tr style='height:28.0pt'>
+  <td width=132 style='width:98.85pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  background:white;padding:0cm 5.4pt 0cm 5.4pt;height:28.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:11.0pt;line-height:150%;font-family:"Times New Roman",serif;
+  color:black'>social_network</span></p>
+  </td>
+  <td width=378 style='width:283.85pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  background:white;padding:0cm 5.4pt 0cm 5.4pt;height:28.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:11.0pt;line-height:150%;font-family:"Times New Roman",serif;
+  color:black'>With how many people do you interact with during a typical
+  day?[0 to 10]</span></p>
+  </td>
+ </tr>
+ <tr style='height:28.0pt'>
+  <td width=104 rowspan=4 style='width:77.75pt;border:solid windowtext 1.0pt;
+  border-top:none;background:white;padding:0cm 5.4pt 0cm 5.4pt;height:28.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><b><span
+  lang=EN-US style='font-size:11.0pt;line-height:150%;font-family:"Times New Roman",serif;
+  color:#0D0D0D'>Expertise</span></b></p>
+  </td>
+  <td width=132 style='width:98.85pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  background:white;padding:0cm 5.4pt 0cm 5.4pt;height:28.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:11.0pt;line-height:150%;font-family:"Times New Roman",serif;
+  color:black'>achievement</span></p>
+  </td>
+  <td width=378 style='width:283.85pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  background:white;padding:0cm 5.4pt 0cm 5.4pt;height:28.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:11.0pt;line-height:150%;font-family:"Times New Roman",serif;
+  color:black'>How many remarkable achievements are you proud of over the last
+  12 months?[0 to 10]</span></p>
+  </td>
+ </tr>
+ <tr style='height:28.0pt'>
+  <td width=132 style='width:98.85pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  background:white;padding:0cm 5.4pt 0cm 5.4pt;height:28.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:11.0pt;line-height:150%;font-family:"Times New Roman",serif;
+  color:black'>personal_awards</span></p>
+  </td>
+  <td width=378 style='width:283.85pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  background:white;padding:0cm 5.4pt 0cm 5.4pt;height:28.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:11.0pt;line-height:150%;font-family:"Times New Roman",serif;
+  color:black'>How many recognitions have you received in your life throughout
+  12 months?[0 to 10]</span></p>
+  </td>
+ </tr>
+ <tr style='height:28.0pt'>
+  <td width=132 style='width:98.85pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  background:white;padding:0cm 5.4pt 0cm 5.4pt;height:28.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:11.0pt;line-height:150%;font-family:"Times New Roman",serif;
+  color:black'>time_for_passion</span></p>
+  </td>
+  <td width=378 style='width:283.85pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  background:white;padding:0cm 5.4pt 0cm 5.4pt;height:28.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:11.0pt;line-height:150%;font-family:"Times New Roman",serif;
+  color:black'>How many hours do you spend every day doing what you are
+  passionate about?[0 to 10]</span></p>
+  </td>
+ </tr>
+ <tr style='height:28.0pt'>
+  <td width=132 style='width:98.85pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  background:white;padding:0cm 5.4pt 0cm 5.4pt;height:28.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:11.0pt;line-height:150%;font-family:"Times New Roman",serif;
+  color:black'>todo_completed</span></p>
+  </td>
+  <td width=378 style='width:283.85pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  background:white;padding:0cm 5.4pt 0cm 5.4pt;height:28.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:11.0pt;line-height:150%;font-family:"Times New Roman",serif;
+  color:black'>How well do you complete your weekly to-do lists? <br>
+  [on a scale of 0 = not at all to 10 = very well]</span></p>
+  </td>
+ </tr>
+ <tr style='height:28.0pt'>
+  <td width=104 rowspan=4 style='width:77.75pt;border:solid windowtext 1.0pt;
+  border-top:none;background:white;padding:0cm 5.4pt 0cm 5.4pt;height:28.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><b><span
+  lang=EN-US style='font-size:11.0pt;line-height:150%;font-family:"Times New Roman",serif;
+  color:black'>Meaning</span></b></p>
+  </td>
+  <td width=132 style='width:98.85pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  background:white;padding:0cm 5.4pt 0cm 5.4pt;height:28.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:11.0pt;line-height:150%;font-family:"Times New Roman",serif;
+  color:black'>donation</span></p>
+  </td>
+  <td width=378 style='width:283.85pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  background:white;padding:0cm 5.4pt 0cm 5.4pt;height:28.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:11.0pt;line-height:150%;font-family:"Times New Roman",serif;
+  color:black'>How many times do you donate your time or money to good causes
+  throughout 12 months?</span></p>
+  </td>
+ </tr>
+ <tr style='height:28.0pt'>
+  <td width=132 style='width:98.85pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  background:white;padding:0cm 5.4pt 0cm 5.4pt;height:28.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:11.0pt;line-height:150%;font-family:"Times New Roman",serif;
+  color:black'>lost_vacation</span></p>
+  </td>
+  <td width=378 style='width:283.85pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  background:white;padding:0cm 5.4pt 0cm 5.4pt;height:28.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:11.0pt;line-height:150%;font-family:"Times New Roman",serif;
+  color:black'>How many days of vacation do you typically lose every year
+  unused vacation days?[0 to 10]</span></p>
+  </td>
+ </tr>
+ <tr style='height:28.0pt'>
+  <td width=132 style='width:98.85pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  background:white;padding:0cm 5.4pt 0cm 5.4pt;height:28.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:11.0pt;line-height:150%;font-family:"Times New Roman",serif;
+  color:black'>sufficient_income</span></p>
+  </td>
+  <td width=378 style='width:283.85pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  background:white;padding:0cm 5.4pt 0cm 5.4pt;height:28.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:11.0pt;line-height:150%;font-family:"Times New Roman",serif;
+  color:black'>How sufficient is your income to cover basic living expenses?[1
+  for insufficient, 2 for sufficient]</span></p>
+  </td>
+ </tr>
+ <tr style='height:28.0pt'>
+  <td width=132 style='width:98.85pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  background:white;padding:0cm 5.4pt 0cm 5.4pt;height:28.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:11.0pt;line-height:150%;font-family:"Times New Roman",serif;
+  color:black'>live_vision</span></p>
+  </td>
+  <td width=378 style='width:283.85pt;border-top:none;border-left:none;
+  border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  background:white;padding:0cm 5.4pt 0cm 5.4pt;height:28.0pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+  lang=EN-US style='font-size:11.0pt;line-height:150%;font-family:"Times New Roman",serif;
+  color:black'>For how many years ahead is your life vision very clear?[0 to
+  10]</span></p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoListParagraph style='margin-left:17.85pt;text-indent:-17.85pt;
+line-height:150%'><a name="_Toc167893362"><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>2.2<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span lang=EN-US
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Methodologies</span></a></p>
+
+<p class=MsoNormal style='line-height:150%'><a name="_Toc167893363"><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>2.2.1
+Data Preprocessing</span></a></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>(1) Standardized
+data</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Examining the
+range of variables revealed differences in the scales used to measure factors
+affecting work-life balance. This means that the data needs to be standardized.</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Table 2: Range of
+independent variables</span></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'><img
+width=363 height=333 src="MultivariateAnalysis.files/image002.jpg"
+alt="A table with numbers and symbols&#10;&#10;Description automatically generated"></span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Each independent
+variable was standardized to have a mean of 0 and a variance of 1. The mean of
+each variable was then checked to see if it was close to 0 after processing to
+ensure standardization was correct. </span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Table 3: Range of standardized
+independent variables</span></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'><img
+width=363 height=318 src="MultivariateAnalysis.files/image003.jpg"></span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>(2) Create a new
+column</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>For ease of
+analysis, a new variable 'score_level' has been created based on the
+'WORK_LIFE_BALANCE_SCORE' to classify the sample into six levels:</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Level '1': Scores
+less than or equal to 550.</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Level '2': Scores
+between 551 and 600.</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Level '3': Scores
+between 601 and 650.</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Level '4': Scores
+between 651 and 700.</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Level '5': Scores
+between 701 and 750.</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Level '6': Scores
+greater than 750.</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoNormal style='line-height:150%'><a name="_Toc167893364"><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>2.2.2
+Methods of Multivariate Analysis</span></a></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>(1) Principal
+Component Analysis (PCA)</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>PCA identifies
+patterns in data by transforming variables into a new set of uncorrelated
+variables called principal components. This study uses PCA to examine how variables
+contribute to the variance in work-life balance scores and identify which
+variables are primarily responsible for differences in these scores. </span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>(2) Factor
+Analysis </span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>This study uses
+factor analysis to understand the essential drivers among the 20 predictor
+variables. Maximum likelihood extraction is used to identify the latent factors
+underlying the observed variables. In addition, orthogonal varimax rotation is
+applied to improve the interpretability of the factors. </span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>(3) Cluster
+Analysis</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Cluster analysis
+is a statistical technique to identify groups of similar objects or individuals
+within a dataset. This study uses the VARCLUS procedure to perform a clustering
+analysis on the variables. This technique groups variables based on similarities
+and identifies clusters exhibiting similar patterns. </span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>(4) Correspondence
+analysis</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Correspondence
+analysis examines trends in the distribution of work-life balance scores across
+different demographic groups(age and gender). It assesses whether specific
+distribution patterns exist within these groups. </span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>(5) Canonical
+Correlation Analysis</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Canonical
+correlation analysis explores the relationships between different variable sets
+and how they influence each other. This study examines the correlations between
+different sets of predictor variables and their impact on work-life balance
+outcomes. </span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>(6) Partial Least
+Squares (PLS) regression analysis</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>PLS regression
+analysis determines the relative importance of variables in predicting
+work-life balance scores. As the work-life balance score is derived from 20
+predictor variables using a specific algorithm, PLS regression helps to
+identify which variables play a significant role in the prediction model.</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoListParagraph style='margin-left:17.85pt;text-indent:-17.85pt;
+line-height:150%'><a name="_Toc167893365"><b><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>3.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span></b><b><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Result</span></b></a></p>
+
+<p class=MsoListParagraph style='margin-left:17.85pt;text-indent:-17.85pt;
+line-height:150%'><a name="_Toc167893366"><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>3.1<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span lang=EN-US
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Principal
+Components Analysis</span></a></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Principal
+component analysis is performed to investigate which indicators best explain
+the variance in work-life balance scores. </span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Figure 2
+underscores the importance of the first principal component, with an eigenvalue
+of 4.37. This component is responsible for a substantial portion, 21.84%, of
+the total variance, thereby containing the most significant information.</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Table 2:
+Eigenvalues of correlation matrix in PCA</span></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'><img
+width=300 height=329 src="MultivariateAnalysis.files/image004.jpg"></span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>The Scree plot in
+figure 2 shows a rapid eigenvalue decrease after the first principal component.
+Subsequent values gradually stabilize. In addition, the Variance Explained plot
+shows that the first two principal components cumulatively explain about 30% of
+the variance. </span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Figure 2: PCA
+scree plot </span></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'><img
+width=605 height=340 id="Picture 7"
+src="MultivariateAnalysis.files/image005.jpg"
+alt="A graph of different components&#10;&#10;Description automatically generated with medium confidence"></span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Although principal
+components 1 and 2 do not fully explain the variance, they still contain
+important information. Therefore, to find out how the variables affect the
+variance in work-life balance scores, it is decided to focus on these first two
+principal components for an in-depth study.</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Figure 3: PCA
+component pattern </span></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:150%'><span
+style='position:absolute;z-index:251664384;margin-left:15px;margin-top:4197px;
+width:581px;height:580px'><img width=387 height=387
+src="MultivariateAnalysis.files/image006.png"></span><span lang=EN-US
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'><img
+width=470 height=470 id="Picture 9"
+src="MultivariateAnalysis.files/image007.png"></span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Figure 3 shows the
+loadings of each variable on the first two principal components.</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>For component 1,
+variables associated with personal accomplishment and satisfaction, such as
+'Time for Passion', 'Flow', and 'Supporting Others', have high positive
+loadings. This suggests that they significantly contribute to explaining the
+variance in the first principal component. The high positive loadings of these
+variables also suggest potential relationships that collectively influence
+people's life satisfaction and well-being.</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Regarding
+component 2, variables such as 'daily stress' have significant positive
+loadings. Health-related habits such as 'hours of sleep', 'weekly meditation',
+and 'daily steps' have negative loadings. The second principal component is,
+therefore, likely to be related to individuals' health and vitality. This
+implies that stress management and health maintenance significantly affect
+individuals' work-life balance scores.</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Figure 4: PCA
+component scores</span></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'><img
+width=498 height=373 id="Picture 13"
+src="MultivariateAnalysis.files/image008.jpg"
+alt="A diagram of a component score&#10;&#10;Description automatically generated"></span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif;color:#0D0D0D;
+background:white'>Figure 4 shows the distribution of the samples under the two
+principal components. The number on each sample point represents the level of
+the sample's work-life balance score. Lower numbers indicate poorer work-life
+balance.</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif;color:#0D0D0D;
+background:white'>Principal Component 1 (horizontal axis): Samples with higher
+work-life balance scores appear more concentrated to the right of the center
+while lower-scoring samples tend to be to the left. This suggests a possible
+link between principal component 1 and some of the positive factors that
+influence work-life balance, such as greater personal fulfilment and
+satisfaction.</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif;color:#0D0D0D;
+background:white'>Principal Component 2 (vertical axis): Samples with lower
+work-life balance tend to be higher, while samples with higher balance are
+relatively lower. This suggests that the principal component 2 captures factors
+negatively associated with work-life balance.</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoListParagraph style='margin-left:17.85pt;text-indent:-17.85pt;
+line-height:150%'><a name="_Toc167893367"><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>3.2<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span lang=EN-US
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Factor
+Analysis</span></a></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Factor analysis is
+used to discover the underlying factors determining work-life balance scores
+and identify relationships between variables and common influences. Due to the
+large sample size, Maximum Likelihood Factor Analysis (MLFA) was used to extract
+the factors. The results obtained are presented in Table 3.</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>According to the
+results, the first factor has the highest eigenvalue (5.27) and explains 78.73%
+of the variance. This indicates that the first factor is the main source of
+variance in the data and plays a very important role in it.</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>The second factor
+has an eigenvalue of 0.99 and explains 14.85% of the data's variance. Although
+it provides much less information than the first factor, it still provides a
+significant amount of information.</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>The cumulative
+proportion of variance explained by these two factors is over 90%. It is
+therefore decided to retain these two factors to capture most of the variation
+in the data.</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Table 3: FA
+preliminary eigenvalues</span></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'><img
+width=305 height=347 src="MultivariateAnalysis.files/image009.jpg"></span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>After applying the
+varimax orthogonal rotation method, the results are as follows.</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Factor 1 (explains
+75.16% of the variance): The variables with high loadings include achievement,
+support for others, social network, and personal awards, primarily associated
+with social interactions, achievement and support for others. This suggests that
+Factor 1 may represent an individual's achievements and interactions within
+their social environment.</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Factor 2 (explains
+24.84% of the variance): Variables with high positive loadings relate to
+personal stress levels and health status, such as daily shouting, daily stress,
+and BMI. Conversely, good recovery habits and a healthy lifestyle are
+associated with high negative loading variables such as hours of sleep and
+weekly meditation. Therefore, Factor 2 can be interpreted as representing
+health and stress management, which includes living habits and stressors
+affecting individual health status.</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Figure 5: Result
+of the FA rotated factor pattern</span></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'><img
+width=329 height=329 id="Picture 16"
+src="MultivariateAnalysis.files/image010.jpg"
+alt="A graph with a number of words&#10;&#10;Description automatically generated with medium confidence"><img
+width=255 height=331 src="MultivariateAnalysis.files/image011.jpg"></span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif;color:#0D0D0D;
+background:white'>The path diagram in figure 6 shows how the variables are
+related to each other through the factors. The numbers next to each variable
+indicate its loading on the corresponding factor, representing the degree of
+association between the variable and the factor. Higher loadings indicate more
+significant contributions of the variables to the factor.</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif;color:#0D0D0D;
+background:white'>Factor 1 links several variables: achievement (0.86), places
+visited (0.78), and flow (0.68). The high loadings of these variables indicate
+their importance within this factor. They are typically related to personal
+achievement and life satisfaction.</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif;color:#0D0D0D;
+background:white'>Factor 2: Associated with Daily Stress (0.86) and Daily
+Shouting (0.87), indicating high loadings related to stress and emotional
+management in daily life.</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif;color:#0D0D0D;
+background:white'>The findings in the path diagram are consistent with those in
+the factor pattern figure.</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif;color:#0D0D0D;
+background:white'>Figure 6: FA path diagram</span></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'><img
+width=451 height=451 id="Picture 17"
+src="MultivariateAnalysis.files/image012.jpg"
+alt="A diagram of a diagram&#10;&#10;Description automatically generated"></span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoListParagraph style='margin-left:17.85pt;text-indent:-17.85pt;
+line-height:150%'><a name="_Toc167893368"><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>3.3<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span lang=EN-US
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Cluster
+Analysis</span></a></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif;color:#0D0D0D;
+background:white'>Cluster analysis results illustrate how variables are grouped
+based on similarities, providing insight into which variables exhibit similar behaviors.
+As shown in table 4, five clusters were ultimately identified.</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif;color:#0D0D0D;
+background:white'>Table 4: Result of cluster analysis</span></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'><img
+width=355 height=381 src="MultivariateAnalysis.files/image013.jpg"
+alt="A screenshot of a data table&#10;&#10;Description automatically generated"></span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif;color:#0D0D0D;
+background:white'>Figure 7: Dendrogram of cluster analysis</span></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'><img
+width=523 height=392 id="Picture 18"
+src="MultivariateAnalysis.files/image014.jpg"
+alt="A graph with black text&#10;&#10;Description automatically generated with medium confidence"></span></p>
+
+<p style='margin:0cm;line-height:150%'><span lang=EN-US style='font-family:
+"Times New Roman",serif;color:#0E101A'>Figure 7 shows the dendrogram of cluster
+analysis, we can see five clusters in the graph.</span></p>
+
+<p style='margin:0cm;line-height:150%'><span lang=EN-US style='font-family:
+"Times New Roman",serif;color:#0E101A'>Cluster 1: This cluster focuses on
+personal achievement and social interaction, including Social Network,
+Achievement, to-Do Completed, Flow, Live Vision, and Time for Passion. These
+variables reflect individuals' pursuit of and enthusiasm for personal success.
+This suggests that individuals in this cluster are highly self-directed and
+have excellent social skills, which help them build meaningful professional and
+personal relationships.</span></p>
+
+<p style='margin:0cm;line-height:150%'><strong><span lang=EN-US
+style='color:#0E101A;font-weight:normal'>Cluster 2:</span></strong><span
+lang=EN-US style='font-family:"Times New Roman",serif;color:#0E101A'> Focuses
+on daily health habits, including Daily Steps and Weekly Meditation. This
+suggests that the variables in this cluster are associated with physical
+activity and mental well-being. Focusing on this can positively affect overall
+quality of life, help to reduce stress, and increase overall happiness.</span></p>
+
+<p style='margin:0cm;line-height:150%'><span lang=EN-US style='font-family:
+"Times New Roman",serif;color:#0E101A'>Cluster 3 deals with stress and emotion
+management, including Daily Stress, lost vacation, and Daily Shouting. This
+cluster focuses on issues related to stress. High levels of stress and limited
+time to relax (lost vacation) can lead to health problems and decreased life
+satisfaction.</span></p>
+
+<p style='margin:0cm;line-height:150%'><span lang=EN-US style='font-family:
+"Times New Roman",serif;color:#0E101A'>Cluster 4: Relates to social interaction
+and life satisfaction, including fruits and vegetables, places visited, core
+circle, supporting others, giving, sufficient income and personal awards.
+Social interactions and expanding social circles are associated with these
+variables. They reflect individuals' activities in maintaining social
+relationships and community involvement. These are typically associated with
+higher life satisfaction and personal well-being.</span></p>
+
+<p style='margin:0cm;line-height:150%'><span lang=EN-US style='font-family:
+"Times New Roman",serif;color:#0E101A'>Cluster 5: This cluster relates to
+health monitoring, including BMI range and sleep hours. These variables focus
+on health indicators and lifestyle habits, particularly weight management and
+sleep quality.</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoListParagraph style='margin-left:17.85pt;text-indent:-17.85pt;
+line-height:150%'><a name="_Toc167893369"><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>3.4<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span lang=EN-US
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Correspondence
+Analysis</span></a></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>A correspondence
+analysis is carried out to see if there are patterns in the distribution of
+work-life balance scores across different demographic groups. In other words,
+this analysis aims to see if certain groups have higher levels of low life
+satisfaction.</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>The table below
+was obtained after grouping and aggregating the statistics for different
+demographics. The table shows that scores for different demographic groups
+follow a similar trend to the overall distribution, with higher frequencies in
+the middle and lower frequencies at the extremes. There are no apparent
+patterns in the distribution of demographic work-life balance scores.</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Table 5: Result of
+correspondence analysis</span></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'><img
+width=421 height=551 src="MultivariateAnalysis.files/image015.jpg"></span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif;color:#0D0D0D;
+background:white'>Figure 8 shows the correlation between score levels across
+gender and age groups.</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif;color:#0D0D0D;
+background:white'>Except for one outlier, most gender and age categories are
+clustered near the center of the graph. This clustering suggests that gender
+and age may have a limited effect on the observations. If age and gender
+significantly impacted the results, we would see a more comprehensive
+distribution or pattern of different age and gender categories throughout the
+graph.</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif;color:#0D0D0D;
+background:white'>Figure 8: Result of multiple correspondence analysis</span></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'><img
+width=605 height=453 id="Picture 2"
+src="MultivariateAnalysis.files/image016.jpg"
+alt="A graph with numbers and symbols&#10;&#10;Description automatically generated"></span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoListParagraph style='margin-left:17.85pt;text-indent:-17.85pt;
+line-height:150%'><a name="_Toc167893370"><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>3.5<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span lang=EN-US
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Canonical
+Correlation Analysis</span></a></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Canonical
+Correlation Analysis explores the relationships between different sets of
+variables. This analysis examines three combinations: 'healthy mind and healthy
+body', 'connection and expertise', and 'meaning and expertise'.</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Table 6:
+Correlations between healthy mind and healthy body</span></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'><img
+width=605 height=431 src="MultivariateAnalysis.files/image017.jpg"></span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>(1) Healthy mind
+and healthy body</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>The correlations
+of FRUIT_VEGGIES and DAILY_STEPS with body1 are 0.6795 and 0.7551,
+respectively, indicating a strong positive correlation. This high correlation
+suggests that dietary habits and regular physical activity play a significant
+role in improving physical health. In addition, these two variables are also
+positively correlated with mind1, further emphasising their importance in
+promoting emotional well-being.</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>The correlation
+coefficient between Weekly Meditation and Mind1 is 0.8402, indicating a strong
+positive correlation between regular meditation and a healthy mind.
+Furthermore, the correlation coefficient between Weekly Meditation and body1 is
+0.2898, indicating a weak positive correlation between meditation and physical
+health indicators. Weekly meditation is, therefore, essential in improving
+overall well-being. </span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>(2) Connection and
+expertise</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Table 7:
+Correlations between connection and expertise</span></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'><img
+width=605 height=433 src="MultivariateAnalysis.files/image018.jpg"
+alt="A table with numbers and text&#10;&#10;Description automatically generated with medium confidence"></span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>The high
+correlation between 'Time for Passion' and E1 (0.7613) strongly suggests that
+an individual's investment in pursuing their interests and passions is
+essential in achieving personal fulfilment.</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>In addition, the
+positive correlation between 'Time for Passion' and C1 (0.4593) suggests that
+pursuing one's passions is related to internal fulfilment and external social
+networks. This suggests that investing time in one's passions contributes to
+internal fulfilment and expands one's social circle and life experiences,
+further enhancing life satisfaction.</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>The high
+correlation (0.8010) of 'Supporting Others' with C1 suggests that this
+behaviour is a core component of building and maintaining a social network.
+'Supporting others' is a meaningful way to build trust and social connections.</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Meanwhile, the
+significant positive correlation between 'Supporting Others' and E1 (0.4832)
+further emphasises that helping others can contribute to an individual's career
+success. This may be because helping others builds positive interpersonal
+relationships and a positive social image, which is essential for career
+success.</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>(3) </span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Meaning
+and expertise</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Table 8:
+Correlations between meaning and expertise</span></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'><img
+width=605 height=434 id="Picture 1"
+src="MultivariateAnalysis.files/image019.jpg"></span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>'Achievement'
+correlates most strongly with E1 (0.8312), indicating that 'achievement' is
+most represented in the 'expertise' variable set.</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>In addition, the
+correlation between 'achievement' and M1 is 0.4110, indicating that personal
+achievement is positively related to realising life visions. This relationship
+suggests that reaching higher levels of professional achievement may be closely
+related to achieving a sense of meaning and fulfilment in one's life.</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>The high
+correlation (0.8711) of 'LIVE_VISION' with M1 indicates that personal life
+vision is critical in the 'Meaning' variable set.</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Meanwhile, the
+correlation between 'LIVE_VISION' and E1 was 0.4307, further emphasising the
+positive relationship between an individual's life vision and professional
+achievements. This suggests that an individual's professional development often
+interacts with and reinforces their life goals and visions.</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoListParagraph style='margin-left:17.85pt;text-indent:-17.85pt;
+line-height:150%'><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif'>3.6<span style='font:7.0pt "Times New Roman"'>&nbsp;
+</span></span><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif'>&nbsp;<a name="_Toc167893371">PLS Regression</a></span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>The work-life
+balance score is derived from 20 predictor variables using an algorithm. This
+raises the question of which variables are more influential in the prediction
+model. A PLS regression analysis was therefore conducted to answer this
+question.</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Figure 9: Variable
+importance plot </span></p>
+
+<p class=MsoNormal align=center style='text-align:center;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'><img
+width=538 height=404 id="Picture 20"
+src="MultivariateAnalysis.files/image020.jpg"
+alt="A graph with blue dots and blue dots&#10;&#10;Description automatically generated"></span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>(1) Significant
+variables:</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Time for passion:
+Making time for personal passions or hobbies is essential for a balanced life.</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Supporting others:
+Supporting others is essential in strengthening social connections and
+improving overall life satisfaction.</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Achievement:
+Accomplishing is essential for boosting individual self-esteem and motivation.</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Places visited:
+Visiting different places can enrich personal cultural experiences and social
+interactions, positively impacting the quality of life. </span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>(2) Variables of
+lesser importance: </span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Daily shouting:
+seems to have less importance in the prediction model</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Lost vacation:
+Although the loss of holiday time can increase stress, its relative importance
+in this analysis is low, suggesting that other factors may play a more central
+role in individuals' lives.</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Sleep hours:
+Although adequate sleep is crucial for health, sleep hours may not be as
+significant as other factors in determining work-life balance.</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoListParagraph style='margin-left:17.85pt;text-indent:-17.85pt;
+line-height:150%'><a name="_Toc167893372"><b><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>4.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span></b><b><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Discussion</span></b></a></p>
+
+<p class=MsoListParagraph style='margin-left:17.85pt;text-indent:-17.85pt;
+line-height:150%'><a name="_Toc167893373"><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>4.1<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span lang=EN-US
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Summary
+of Key Findings</span></a><span lang=EN-US style='font-size:12.0pt;line-height:
+150%;font-family:"Times New Roman",serif'>&nbsp; </span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>In this study,
+extensive analyses of the work-life balance dataset were carried out using
+various multivariate analysis techniques, leading to several significant
+findings:</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>(1) PCA revealed
+several vital variables explaining the variance between work and life
+satisfaction. In the first principal component, 'Time for Passion', 'Flow' and
+'Supporting Others' had high positive loadings, indicating their significant
+contribution to people's overall life satisfaction and happiness. In contrast,
+the second principal component highlighted the importance of health-related
+habits and stress management, such as &quot;Daily Stress&quot;, &quot;Sleep
+Hours&quot;, and &quot;Weekly Meditation&quot;, in influencing work-life
+balance scores.</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>(2) In the FA, the
+rotated factor structure identified the underlying factors behind each
+predictor variable in the factor analysis. The first factor relates primarily
+to social support and a sense of accomplishment. In contrast, the second factor
+emphasizes the importance of health and stress management.</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>(3) Cluster
+analysis revealed five clusters based on which variables were most similar,
+forming distinct groups: ‘Personal Achievement and Social Interaction’, ‘Daily
+Health Habits’, ‘Stress and Emotion Management’, ‘Social Interaction and Life
+Satisfaction’, and ‘Health monitoring’.</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>(4) Correspondence
+analysis examined the effect of gender and age on observed variables across
+demographic groups. No significant distributional differences were observed
+between different gender and age groups, suggesting that gender and age may not
+significantly impact the variables under investigation.</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>(5) Canonical
+correlation analysis revealed significant relationships between three different
+sets of variables: ‘Healthy Mind and Healthy Body’, ‘Connection and Expertise’,
+and ‘Meaning and Expertise’. Each of these variables showed significant
+correlations.</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>(6) The PLS
+regression analysis shows that variables such as 'Time for passion' and
+'Supporting others' play a significant role in predicting the work-life balance
+score, being the most influential variables in the model. Conversely, 'daily
+shouting', 'loss of vacation' and 'sleeping hours' are identified as the least
+influential variables in the model.</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoListParagraph style='margin-left:17.85pt;text-indent:-17.85pt;
+line-height:150%'><a name="_Toc167893374"><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>4.2<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span lang=EN-US
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Insights
+and Interventions</span></a></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>The results of the
+study provide practical insights into work-life balance.</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>First, in terms of
+policy and workplace interventions, key variables such as 'time for passion',
+'flow' and 'support for others' highlight the need for workplaces to promote
+personal growth and social support. It can be beneficial to introduce flexible
+working hours, encourage leisure activities and improve social networks</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>(Odeloye
+et al., n.d.)</span><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif'>.</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>In addition, with
+regard to health and well-being programs, the importance of healthy habits and
+stress management in achieving work-life balance highlights the need for
+comprehensive well-being programs, including the provision of stress workshops
+and mental health resources</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>(n.d.)</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>.</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+<p class=MsoListParagraph style='margin-left:17.85pt;text-indent:-17.85pt;
+line-height:150%'><a name="_Toc167893375"><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>4.3<span
+style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span lang=EN-US
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Future
+Avenues for Research</span></a></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Despite the
+valuable insights gained from this study, several potential avenues for future
+research need to be explored.</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>First, one’s
+work-life balance score may evolve naturally over time, even without the
+influence of external variables</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>(J.
+Navarro et al., 2015)</span><span lang=EN-US style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman",serif'>. Therefore, future
+research could extend these findings by examining changes in the indicators
+over time, thereby revealing the nature of work-life balance over time or under
+different external influences.</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Secondly, the
+impact of cultural norms and values on work-life balance could be explored by
+examining these variables in different cultural contexts.</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Finally, although
+this study found no significant effects of gender and age, further research
+using different analyses could determine whether there are potential effects
+not captured in this study.</span></p>
+
+<p class=MsoNormal style='line-height:150%'><b><span lang=EN-US
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>&nbsp;</span></b></p>
+
+<p class=MsoListParagraph style='margin-left:17.85pt;text-indent:-17.85pt;
+line-height:150%'><a name="_Toc167893376"><b><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>5.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span></span></b><b><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Conclusion</span></b></a></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>This
+study used various multivariate analysis techniques to examine work-life
+balance factors, focusing on five categories of predictor variables. Given the
+study's limited scope, only a few selected multivariate methods were used to
+analyse the data. While valuable insights were gained, the complexity of the
+factors influencing work-life balance outcomes requires further exploration
+with a larger dataset and more advanced analytical techniques.</span></p>
+
+<b><span lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'><br
+clear=all style='page-break-before:always'>
+</span></b>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><b><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>&nbsp;</span></b></p>
+
+<p class=MsoNormal style='line-height:150%'><a name="_Toc167893377"><b><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Reference</span></b></a></p>
+
+<p class=MsoBibliography style='line-height:150%'><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Awareness
+of Stress‐reduction Interventions: The Impact on Employees’ Well‐being and
+Organizational Attitudes—Pignata—2016—Stress and Health—Wiley Online Library.
+(n.d.). Retrieved May 29, 2024, from
+https://onlinelibrary-wiley-com.ezproxy.massey.ac.nz/doi/full/10.1002/smi.2597</span></p>
+
+<p class=MsoBibliography style='line-height:150%'><span lang=EN-US
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Navarro,
+J., Roe, R. A., &amp; Artiles, M. I. (2015). Taking time seriously: Changing
+practices and perspectives in Work/Organizational Psychology. Revista de
+Psicología Del Trabajo y de Las Organizaciones, 31(3), 135–145.
+https://doi.org/10.1016/j.rpto.2015.07.002</span></p>
+
+<p class=MsoBibliography style='line-height:150%'><span lang=EN-US
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Navarro,
+S. N. B. (2018). Factors affecting work-life balance for administrative and
+non-administrative workers in an Icelandic company [Thesis].
+https://skemman.is/handle/1946/32267</span></p>
+
+<p class=MsoBibliography style='line-height:150%'><span lang=EN-US
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Nopdanai,
+J. (2021). FACTORS AFFECTING WORK-LIFE-BALANCE WORKING FROM HOME DURING
+COVID-19 PANDEMIC [Thesis, Mahidol University].
+https://archive.cm.mahidol.ac.th/handle/123456789/4178</span></p>
+
+<p class=MsoBibliography style='line-height:150%'><span lang=EN-US
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Odeloye,
+O. F., Osibanjo, A. O., Adeyeri, O. I., Ogbari, M., &amp; Akande, J. O. (n.d.).
+Factors of Work-Life Balance That Influence Employee Performance in
+Government-Owned Organizations in Nigeria: A Conceptual Review.</span></p>
+
+<p class=MsoNormal style='line-height:150%'><b><span lang=EN-US
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>&nbsp;</span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><b><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>&nbsp;</span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><b><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>&nbsp;</span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><b><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>&nbsp;</span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><b><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>&nbsp;</span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><b><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>&nbsp;</span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><b><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>&nbsp;</span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><b><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>&nbsp;</span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><b><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>&nbsp;</span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><b><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>&nbsp;</span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><b><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>&nbsp;</span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%'><b><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>&nbsp;</span></b></p>
+
+<p class=MsoNormal style='line-height:150%'><a name="_Toc167893378"><b><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>Appendix</span></b></a></p>
+
+<p class=MsoNormal style='line-height:150%'><b><span lang=EN-US
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>SAS
+code</span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+text-autospace:none'><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:#1B7A1B;background:white'>*Import
+file;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+text-autospace:none'><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:blue;background:white'>%let</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:black;background:white'> path=E:\course\Multivariate
+Analysis\mv_pracdata; </span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+text-autospace:none'><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:blue;background:white'>libname</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:black;background:white'> PRAC</span><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif;color:purple;
+background:white'>&quot;&amp;path&quot;</span><span lang=EN-US
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:black;background:white'>;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+text-autospace:none'><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:black;background:white'>&nbsp;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+text-autospace:none'><b><span lang=EN-US style='font-size:12.0pt;line-height:
+150%;font-family:"Times New Roman",serif;color:navy;background:white'>proc</span></b><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:black;background:white'> </span><b><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif;color:navy;
+background:white'>import</span></b><span lang=EN-US style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman",serif;color:black;background:
+white'> </span><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:blue;background:white'>datafile</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:black;background:white'>=</span><span lang=EN-US style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman",serif;color:purple;background:
+white'>&quot;E:\course\Multivariate
+Analysis\mv_pracdata\Wellbeing_and_lifestyle_data_Kaggle.csv&quot;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+text-autospace:none'><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:black;background:white'>&nbsp;&nbsp;&nbsp;
+</span><span lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:
+"Times New Roman",serif;color:blue;background:white'>out</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:black;background:white'>=lifestyle</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+text-autospace:none'><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:black;background:white'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:blue;background:white'>dbms</span><span lang=EN-US style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman",serif;color:black;background:
+white'>=csv </span><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:blue;background:white'>replace</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:black;background:white'>;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+text-autospace:none'><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:black;background:white'>&nbsp;&nbsp;&nbsp;
+</span><span lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:
+"Times New Roman",serif;color:blue;background:white'>getnames</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:black;background:white'>=yes;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+text-autospace:none'><b><span lang=EN-US style='font-size:12.0pt;line-height:
+150%;font-family:"Times New Roman",serif;color:navy;background:white'>run</span></b><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:black;background:white'>;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+text-autospace:none'><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:black;background:white'>&nbsp;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+text-autospace:none'><b><span lang=EN-US style='font-size:12.0pt;line-height:
+150%;font-family:"Times New Roman",serif;color:navy;background:white'>proc</span></b><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:black;background:white'> </span><b><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif;color:navy;
+background:white'>sgplot</span></b><span lang=EN-US style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman",serif;color:black;background:
+white'> </span><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:blue;background:white'>data</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:black;background:white'>=lifestyle;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+text-autospace:none'><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:black;background:white'>&nbsp; </span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:blue;background:white'>vbar</span><span lang=EN-US style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman",serif;color:black;background:
+white'> age / </span><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:blue;background:white'>datalabel</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:black;background:white'> </span><span lang=EN-US style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman",serif;color:blue;background:
+white'>group</span><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:black;background:white'>=gender </span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:blue;background:white'>groupdisplay</span><span lang=EN-US
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:black;background:white'>=cluster;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+text-autospace:none'><b><span lang=EN-US style='font-size:12.0pt;line-height:
+150%;font-family:"Times New Roman",serif;color:navy;background:white'>run</span></b><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:black;background:white'>;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+text-autospace:none'><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:black;background:white'>&nbsp;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+text-autospace:none'><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:#1B7A1B;background:white'>*standardize;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+text-autospace:none'><b><span lang=EN-US style='font-size:12.0pt;line-height:
+150%;font-family:"Times New Roman",serif;color:navy;background:white'>proc</span></b><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:black;background:white'> </span><b><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif;color:navy;
+background:white'>standard</span></b><span lang=EN-US style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman",serif;color:black;background:
+white'> </span><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:blue;background:white'>data</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:black;background:white'>=lifestyle </span><span lang=EN-US
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:blue;background:white'>mean</span><span lang=EN-US style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman",serif;color:black;background:
+white'>=</span><b><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:#08726D;background:white'>0</span></b><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:black;background:white'> </span><span lang=EN-US style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman",serif;color:blue;background:
+white'>std</span><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:black;background:white'>=</span><b><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:#08726D;background:white'>1</span></b><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif;color:black;
+background:white'> </span><span lang=EN-US style='font-size:12.0pt;line-height:
+150%;font-family:"Times New Roman",serif;color:blue;background:white'>out</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:black;background:white'>=PRAC.lifestyle_standard;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+text-autospace:none'><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:black;background:white'>&nbsp;&nbsp; </span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:blue;background:white'>var</span><span lang=EN-US style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman",serif;color:black;background:
+white'> fruits_veggies--weekly_meditation; </span><span lang=EN-US
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:#1B7A1B;background:white'>/* Specify the variables to standardize */</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+text-autospace:none'><b><span lang=EN-US style='font-size:12.0pt;line-height:
+150%;font-family:"Times New Roman",serif;color:navy;background:white'>run</span></b><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:black;background:white'>;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+text-autospace:none'><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:black;background:white'>&nbsp;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+text-autospace:none'><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:#1B7A1B;background:white'>*Adding a
+new column;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+text-autospace:none'><b><span lang=EN-US style='font-size:12.0pt;line-height:
+150%;font-family:"Times New Roman",serif;color:navy;background:white'>proc</span></b><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:black;background:white'> </span><b><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif;color:navy;
+background:white'>sgplot</span></b><span lang=EN-US style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman",serif;color:black;background:
+white'> </span><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:blue;background:white'>data</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:black;background:white'>=lifestyle;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+text-autospace:none'><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:blue;background:white'>histogram</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:black;background:white'> work_life_balance_score;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+text-autospace:none'><b><span lang=EN-US style='font-size:12.0pt;line-height:
+150%;font-family:"Times New Roman",serif;color:navy;background:white'>run</span></b><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:black;background:white'>;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+text-autospace:none'><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:black;background:white'>&nbsp;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+text-autospace:none'><b><span lang=EN-US style='font-size:12.0pt;line-height:
+150%;font-family:"Times New Roman",serif;color:navy;background:white'>data</span></b><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:black;background:white'> lifestyle;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+text-autospace:none'><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:black;background:white'>&nbsp;&nbsp;&nbsp;
+</span><span lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:
+"Times New Roman",serif;color:blue;background:white'>set</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:black;background:white'> lifestyle;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+text-autospace:none'><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:black;background:white'>&nbsp;&nbsp;&nbsp;
+</span><span lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:
+"Times New Roman",serif;color:blue;background:white'>if</span><span lang=EN-US
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:black;background:white'> work_life_balance_score &lt;= </span><b><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:#08726D;background:white'>550</span></b><span lang=EN-US
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:black;background:white'> </span><span lang=EN-US style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman",serif;color:blue;background:
+white'>then</span><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:black;background:white'> score_level
+= </span><span lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:
+"Times New Roman",serif;color:purple;background:white'>'1'</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:black;background:white'>;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+text-autospace:none'><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:black;background:white'>&nbsp;&nbsp;&nbsp;
+</span><span lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:
+"Times New Roman",serif;color:blue;background:white'>else</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:black;background:white'> </span><span lang=EN-US style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman",serif;color:blue;background:
+white'>if</span><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:black;background:white'> work_life_balance_score
+&lt;= </span><b><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:#08726D;background:white'>600</span></b><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:black;background:white'> </span><span lang=EN-US style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman",serif;color:blue;background:
+white'>then</span><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:black;background:white'> score_level
+= </span><span lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:
+"Times New Roman",serif;color:purple;background:white'>'2'</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:black;background:white'>;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+text-autospace:none'><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:black;background:white'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:blue;background:white'>else</span><span lang=EN-US style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman",serif;color:black;background:
+white'> </span><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:blue;background:white'>if</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:black;background:white'> work_life_balance_score &lt;= </span><b><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:#08726D;background:white'>650</span></b><span lang=EN-US
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:black;background:white'> </span><span lang=EN-US style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman",serif;color:blue;background:
+white'>then</span><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:black;background:white'> score_level
+= </span><span lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:
+"Times New Roman",serif;color:purple;background:white'>'3'</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:black;background:white'>;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+text-autospace:none'><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:black;background:white'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:blue;background:white'>else</span><span lang=EN-US style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman",serif;color:black;background:
+white'> </span><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:blue;background:white'>if</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:black;background:white'> work_life_balance_score &lt;= </span><b><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:#08726D;background:white'>700</span></b><span lang=EN-US
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:black;background:white'> </span><span lang=EN-US style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman",serif;color:blue;background:
+white'>then</span><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:black;background:white'> score_level
+= </span><span lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:
+"Times New Roman",serif;color:purple;background:white'>'4'</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:black;background:white'>;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+text-autospace:none'><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:black;background:white'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:blue;background:white'>else</span><span lang=EN-US style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman",serif;color:black;background:
+white'> </span><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:blue;background:white'>if</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:black;background:white'> work_life_balance_score &lt;= </span><b><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:#08726D;background:white'>750</span></b><span lang=EN-US
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:black;background:white'> </span><span lang=EN-US style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman",serif;color:blue;background:
+white'>then</span><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:black;background:white'> score_level
+= </span><span lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:
+"Times New Roman",serif;color:purple;background:white'>'5'</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:black;background:white'>;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+text-autospace:none'><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:black;background:white'>&nbsp;&nbsp;&nbsp;
+</span><span lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:
+"Times New Roman",serif;color:blue;background:white'>else</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:black;background:white'> score_level = </span><span lang=EN-US
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:purple;background:white'>'6'</span><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif;color:black;
+background:white'>;</span></p>
+
+<p class=MsoNormal style='line-height:150%'><b><span lang=EN-US
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:navy;background:white'>run</span></b><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif;color:black;
+background:white'>;</span></p>
+
+<p class=MsoNormal style='line-height:150%'><b><span lang=EN-US
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>&nbsp;</span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+text-autospace:none'><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:#1B7A1B;background:white'>*PCA;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+text-autospace:none'><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:blue;background:white'>ods</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:black;background:white'> </span><span lang=EN-US style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman",serif;color:blue;background:
+white'>graphics</span><span lang=EN-US style='font-size:12.0pt;line-height:
+150%;font-family:"Times New Roman",serif;color:black;background:white'> </span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:blue;background:white'>on</span><span lang=EN-US style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman",serif;color:black;background:
+white'>;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+text-autospace:none'><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:black;background:white'>&nbsp;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+text-autospace:none'><b><span lang=EN-US style='font-size:12.0pt;line-height:
+150%;font-family:"Times New Roman",serif;color:navy;background:white'>proc</span></b><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:black;background:white'> </span><b><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif;color:navy;
+background:white'>princomp</span></b><span lang=EN-US style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman",serif;color:black;background:
+white'> </span><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:blue;background:white'>data</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:black;background:white'>=PRAC.lifestyle_standard </span><span lang=EN-US
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:blue;background:white'>outstat</span><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif;color:black;
+background:white'>=princomp_stats;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+text-autospace:none'><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:black;background:white'>&nbsp; </span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:blue;background:white'>var</span><span lang=EN-US style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman",serif;color:black;background:
+white'> fruits_veggies--weekly_meditation;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+text-autospace:none'><b><span lang=EN-US style='font-size:12.0pt;line-height:
+150%;font-family:"Times New Roman",serif;color:navy;background:white'>run</span></b><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:black;background:white'>;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+text-autospace:none'><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:blue;background:white'>ods</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:black;background:white'> </span><span lang=EN-US style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman",serif;color:blue;background:
+white'>graphics</span><span lang=EN-US style='font-size:12.0pt;line-height:
+150%;font-family:"Times New Roman",serif;color:black;background:white'> </span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:blue;background:white'>off</span><span lang=EN-US style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman",serif;color:black;background:
+white'>;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+text-autospace:none'><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:black;background:white'>&nbsp;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+text-autospace:none'><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:blue;background:white'>ods</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:black;background:white'> </span><span lang=EN-US style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman",serif;color:blue;background:
+white'>graphics</span><span lang=EN-US style='font-size:12.0pt;line-height:
+150%;font-family:"Times New Roman",serif;color:black;background:white'>/ </span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:blue;background:white'>imagemap</span><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif;color:black;
+background:white'>;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+text-autospace:none'><b><span lang=EN-US style='font-size:12.0pt;line-height:
+150%;font-family:"Times New Roman",serif;color:navy;background:white'>proc</span></b><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:black;background:white'> </span><b><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif;color:navy;
+background:white'>princomp</span></b><span lang=EN-US style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman",serif;color:black;background:
+white'> </span><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:blue;background:white'>data</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:black;background:white'>=PRAC.lifestyle_standard </span><span lang=EN-US
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:blue;background:white'>n</span><span lang=EN-US style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman",serif;color:black;background:
+white'>=</span><b><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:#08726D;background:white'>2</span></b><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:black;background:white'> </span><span lang=EN-US style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman",serif;color:blue;background:
+white'>out</span><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:black;background:white'>=lifestylestand
+</span><span lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:
+"Times New Roman",serif;color:blue;background:white'>prefix</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:black;background:white'>=ls </span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+text-autospace:none'><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:black;background:white'>&nbsp;</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:blue;background:white'>plots</span><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif;color:black;
+background:white'>=(matrix score(</span><span lang=EN-US style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman",serif;color:blue;background:
+white'>ncomp</span><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:black;background:white'>=</span><b><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:#08726D;background:white'>3</span></b><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif;color:black;
+background:white'>) patternprofile</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+text-autospace:none'><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:black;background:white'>&nbsp;pattern(</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:blue;background:white'>ncomp</span><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif;color:black;
+background:white'>=</span><b><span lang=EN-US style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman",serif;color:#08726D;background:
+white'>3</span></b><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:black;background:white'>));</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+text-autospace:none'><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:black;background:white'>&nbsp;</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:blue;background:white'>var</span><span lang=EN-US style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman",serif;color:black;background:
+white'> fruits_veggies--weekly_meditation;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+text-autospace:none'><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:black;background:white'>&nbsp;</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:blue;background:white'>id</span><span lang=EN-US style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman",serif;color:black;background:
+white'> score_level;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+text-autospace:none'><b><span lang=EN-US style='font-size:12.0pt;line-height:
+150%;font-family:"Times New Roman",serif;color:navy;background:white'>run</span></b><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:black;background:white'>;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+text-autospace:none'><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:blue;background:white'>ods</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:black;background:white'> </span><span lang=EN-US style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman",serif;color:blue;background:
+white'>graphics</span><span lang=EN-US style='font-size:12.0pt;line-height:
+150%;font-family:"Times New Roman",serif;color:black;background:white'> </span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:blue;background:white'>off</span><span lang=EN-US style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman",serif;color:black;background:
+white'>;</span></p>
+
+<p class=MsoNormal style='line-height:150%'><b><span lang=EN-US
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>&nbsp;</span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+text-autospace:none'><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:#1B7A1B;background:white'>*Factor
+analysis;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+text-autospace:none'><b><span lang=EN-US style='font-size:12.0pt;line-height:
+150%;font-family:"Times New Roman",serif;color:navy;background:white'>proc</span></b><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:black;background:white'> </span><b><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif;color:navy;
+background:white'>factor</span></b><span lang=EN-US style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman",serif;color:black;background:
+white'> </span><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:blue;background:white'>data</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:black;background:white'>=PRAC.lifestyle_standard </span><span lang=EN-US
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:blue;background:white'>method</span><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif;color:black;
+background:white'>=ml;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+text-autospace:none'><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:black;background:white'>&nbsp;&nbsp; </span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:blue;background:white'>var</span><span lang=EN-US style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman",serif;color:black;background:
+white'> fruits_veggies--weekly_meditation;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+text-autospace:none'><b><span lang=EN-US style='font-size:12.0pt;line-height:
+150%;font-family:"Times New Roman",serif;color:navy;background:white'>run</span></b><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:black;background:white'>;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+text-autospace:none'><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:black;background:white'>&nbsp;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+text-autospace:none'><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:blue;background:white'>ods</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:black;background:white'> </span><span lang=EN-US style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman",serif;color:blue;background:
+white'>graphics</span><span lang=EN-US style='font-size:12.0pt;line-height:
+150%;font-family:"Times New Roman",serif;color:black;background:white'> </span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:blue;background:white'>on</span><span lang=EN-US style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman",serif;color:black;background:
+white'>;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+text-autospace:none'><b><span lang=EN-US style='font-size:12.0pt;line-height:
+150%;font-family:"Times New Roman",serif;color:navy;background:white'>proc</span></b><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:black;background:white'> </span><b><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif;color:navy;
+background:white'>factor</span></b><span lang=EN-US style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman",serif;color:black;background:
+white'> </span><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:blue;background:white'>data</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:black;background:white'>=PRAC.lifestyle_standard </span><span lang=EN-US
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:blue;background:white'>plots</span><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif;color:black;
+background:white'>=</span><span lang=EN-US style='font-size:12.0pt;line-height:
+150%;font-family:"Times New Roman",serif;color:blue;background:white'>all</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:black;background:white'> </span><span lang=EN-US style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman",serif;color:blue;background:
+white'>method</span><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:black;background:white'>=ml </span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:blue;background:white'>nfact</span><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif;color:black;
+background:white'>=</span><b><span lang=EN-US style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman",serif;color:#08726D;background:
+white'>2</span></b><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:black;background:white'>;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+text-autospace:none'><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:black;background:white'>&nbsp;&nbsp; </span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:blue;background:white'>var</span><span lang=EN-US style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman",serif;color:black;background:
+white'> fruits_veggies--weekly_meditation;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+text-autospace:none'><b><span lang=EN-US style='font-size:12.0pt;line-height:
+150%;font-family:"Times New Roman",serif;color:navy;background:white'>run</span></b><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:black;background:white'>;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+text-autospace:none'><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:black;background:white'>&nbsp;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+text-autospace:none'><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:blue;background:white'>ods</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:black;background:white'> </span><span lang=EN-US style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman",serif;color:blue;background:
+white'>select</span><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:black;background:white'> orthrotfactpat
+patternplot;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+text-autospace:none'><b><span lang=EN-US style='font-size:12.0pt;line-height:
+150%;font-family:"Times New Roman",serif;color:navy;background:white'>proc</span></b><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:black;background:white'> </span><b><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif;color:navy;
+background:white'>factor</span></b><span lang=EN-US style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman",serif;color:black;background:
+white'> </span><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:blue;background:white'>data</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:black;background:white'>=PRAC.lifestyle_standard </span><span lang=EN-US
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:blue;background:white'>plots</span><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif;color:black;
+background:white'>=</span><span lang=EN-US style='font-size:12.0pt;line-height:
+150%;font-family:"Times New Roman",serif;color:blue;background:white'>all</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:black;background:white'> </span><span lang=EN-US style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman",serif;color:blue;background:
+white'>method</span><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:black;background:white'>=ml</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+text-autospace:none'><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:black;background:white'>&nbsp;</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:blue;background:white'>n</span><span lang=EN-US style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman",serif;color:black;background:
+white'>=</span><b><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:#08726D;background:white'>2</span></b><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:black;background:white'> </span><span lang=EN-US style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman",serif;color:blue;background:
+white'>r</span><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:black;background:white'>=v;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+text-autospace:none'><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:black;background:white'>&nbsp;</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:blue;background:white'>var</span><span lang=EN-US style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman",serif;color:black;background:
+white'> fruits_veggies--weekly_meditation;</span></p>
+
+<p class=MsoNormal style='line-height:150%'><b><span lang=EN-US
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:navy;background:white'>run</span></b><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif;color:black;
+background:white'>;</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif;color:black;
+background:white'>&nbsp;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+text-autospace:none'><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:#1B7A1B;background:white'>*Cluster
+analysis;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+text-autospace:none'><b><span lang=EN-US style='font-size:12.0pt;line-height:
+150%;font-family:"Times New Roman",serif;color:navy;background:white'>proc</span></b><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:black;background:white'> </span><b><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif;color:navy;
+background:white'>varclus</span></b><span lang=EN-US style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman",serif;color:black;background:
+white'> </span><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:blue;background:white'>data</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:black;background:white'>=PRAC.lifestyle_standard </span><span lang=EN-US
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:blue;background:white'>maxclusters</span><span lang=EN-US
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:black;background:white'>=</span><b><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif;color:#08726D;
+background:white'>5</span></b><span lang=EN-US style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman",serif;color:black;background:
+white'>;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+text-autospace:none'><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:black;background:white'>&nbsp;&nbsp; </span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:blue;background:white'>var</span><span lang=EN-US style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman",serif;color:black;background:
+white'> fruits_veggies -- weekly_meditation; </span></p>
+
+<p class=MsoNormal style='line-height:150%'><b><span lang=EN-US
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:navy;background:white'>run</span></b><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif;color:black;
+background:white'>;</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif;color:black;
+background:white'>&nbsp;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+text-autospace:none'><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:#1B7A1B;background:white'>*Correspondence
+Analysis;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+text-autospace:none'><b><span lang=EN-US style='font-size:12.0pt;line-height:
+150%;font-family:"Times New Roman",serif;color:navy;background:white'>data</span></b><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:black;background:white'> lifestyle_corr;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+text-autospace:none'><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:black;background:white'>&nbsp;</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:blue;background:white'>set</span><span lang=EN-US style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman",serif;color:black;background:
+white'> PRAC.lifestyle_standard;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+text-autospace:none'><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:black;background:white'>&nbsp;group=gender||age;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+text-autospace:none'><b><span lang=EN-US style='font-size:12.0pt;line-height:
+150%;font-family:"Times New Roman",serif;color:navy;background:white'>run</span></b><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:black;background:white'>;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+text-autospace:none'><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:black;background:white'>&nbsp;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+text-autospace:none'><b><span lang=EN-US style='font-size:12.0pt;line-height:
+150%;font-family:"Times New Roman",serif;color:navy;background:white'>proc</span></b><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:black;background:white'> </span><b><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif;color:navy;
+background:white'>freq</span></b><span lang=EN-US style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman",serif;color:black;background:
+white'> </span><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:blue;background:white'>data</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:black;background:white'>=lifestyle_corr;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+text-autospace:none'><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:black;background:white'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:blue;background:white'>tables</span><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif;color:black;
+background:white'> group*score_level / </span><span lang=EN-US
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:blue;background:white'>chisq</span><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif;color:black;
+background:white'>;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+text-autospace:none'><b><span lang=EN-US style='font-size:12.0pt;line-height:
+150%;font-family:"Times New Roman",serif;color:navy;background:white'>run</span></b><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:black;background:white'>;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+text-autospace:none'><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:black;background:white'>&nbsp;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+text-autospace:none'><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:blue;background:white'>ods</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:black;background:white'> </span><span lang=EN-US style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman",serif;color:blue;background:
+white'>graphics</span><span lang=EN-US style='font-size:12.0pt;line-height:
+150%;font-family:"Times New Roman",serif;color:black;background:white'> </span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:blue;background:white'>on</span><span lang=EN-US style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman",serif;color:black;background:
+white'>;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+text-autospace:none'><b><span lang=EN-US style='font-size:12.0pt;line-height:
+150%;font-family:"Times New Roman",serif;color:navy;background:white'>proc</span></b><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:black;background:white'> </span><b><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif;color:navy;
+background:white'>corresp</span></b><span lang=EN-US style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman",serif;color:black;background:
+white'> </span><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:blue;background:white'>data</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:black;background:white'>=lifestyle_corr </span><span lang=EN-US
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:blue;background:white'>observed</span><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif;color:black;
+background:white'> </span><span lang=EN-US style='font-size:12.0pt;line-height:
+150%;font-family:"Times New Roman",serif;color:blue;background:white'>short</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:black;background:white'> </span><span lang=EN-US style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman",serif;color:blue;background:
+white'>mca</span><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:black;background:white'> </span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:blue;background:white'>benzecri</span><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif;color:black;
+background:white'>;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+text-autospace:none'><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:black;background:white'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:blue;background:white'>tables</span><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif;color:black;
+background:white'> gender age score_level;</span></p>
+
+<p class=MsoNormal style='line-height:150%'><b><span lang=EN-US
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:navy;background:white'>run</span></b><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif;color:black;
+background:white'>;</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif;color:black;
+background:white'>&nbsp;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+text-autospace:none'><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:#1B7A1B;background:white'>* Canonical
+Correlation Analysis;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+text-autospace:none'><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:blue;background:white'>ods</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:black;background:white'> </span><span lang=EN-US style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman",serif;color:blue;background:
+white'>output</span><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:black;background:white'> cancorr=a;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+text-autospace:none'><b><span lang=EN-US style='font-size:12.0pt;line-height:
+150%;font-family:"Times New Roman",serif;color:navy;background:white'>PROC</span></b><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:black;background:white'> </span><b><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif;color:navy;
+background:white'>CANCORR</span></b><span lang=EN-US style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman",serif;color:black;background:
+white'> </span><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:blue;background:white'>DATA</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:black;background:white'>=PRAC.lifestyle_standard</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+text-autospace:none'><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:black;background:white'>&nbsp;&nbsp; </span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:blue;background:white'>vprefix</span><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif;color:black;
+background:white'>=body </span><span lang=EN-US style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman",serif;color:blue;background:
+white'>wprefix</span><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:black;background:white'>=mind; </span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+text-autospace:none'><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:black;background:white'>&nbsp;&nbsp; </span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:blue;background:white'>VAR</span><span lang=EN-US style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman",serif;color:black;background:
+white'> fruits_veggies bmi_range daily_steps sleep_hours; </span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+text-autospace:none'><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:black;background:white'>&nbsp;&nbsp; </span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:blue;background:white'>WITH</span><span lang=EN-US style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman",serif;color:black;background:
+white'> daily_stress flow weekly_meditation DAILY_SHOUTING ;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+text-autospace:none'><b><span lang=EN-US style='font-size:12.0pt;line-height:
+150%;font-family:"Times New Roman",serif;color:navy;background:white'>RUN</span></b><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:black;background:white'>;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+text-autospace:none'><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:black;background:white'>&nbsp;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+text-autospace:none'><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:blue;background:white'>ods</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:black;background:white'> </span><span lang=EN-US style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman",serif;color:blue;background:
+white'>output</span><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:black;background:white'> cancorr=a;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+text-autospace:none'><b><span lang=EN-US style='font-size:12.0pt;line-height:
+150%;font-family:"Times New Roman",serif;color:navy;background:white'>PROC</span></b><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:black;background:white'> </span><b><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif;color:navy;
+background:white'>CANCORR</span></b><span lang=EN-US style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman",serif;color:black;background:
+white'> </span><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:blue;background:white'>DATA</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:black;background:white'>=PRAC.lifestyle_standard</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+text-autospace:none'><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:black;background:white'>&nbsp;&nbsp; </span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:blue;background:white'>vprefix</span><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif;color:black;
+background:white'>=E </span><span lang=EN-US style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman",serif;color:blue;background:
+white'>wprefix</span><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:black;background:white'>=</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:blue;background:white'>C</span><span lang=EN-US style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman",serif;color:black;background:
+white'>; </span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+text-autospace:none'><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:black;background:white'>&nbsp;&nbsp; </span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:blue;background:white'>VAR</span><span lang=EN-US style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman",serif;color:black;background:
+white'> achievement PERSONAL_AWARDS TIME_FOR_PASSION TODO_COMPLETED; </span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+text-autospace:none'><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:black;background:white'>&nbsp;&nbsp; </span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:blue;background:white'>WITH</span><span lang=EN-US style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman",serif;color:black;background:
+white'>&nbsp; PLACES_VISITED CORE_CIRCLE SUPPORTING_OTHERS SOCIAL_NETWORK;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+text-autospace:none'><b><span lang=EN-US style='font-size:12.0pt;line-height:
+150%;font-family:"Times New Roman",serif;color:navy;background:white'>RUN</span></b><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:black;background:white'>;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+text-autospace:none'><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:black;background:white'>&nbsp;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+text-autospace:none'><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:blue;background:white'>ods</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:black;background:white'> </span><span lang=EN-US style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman",serif;color:blue;background:
+white'>output</span><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:black;background:white'> cancorr=a;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+text-autospace:none'><b><span lang=EN-US style='font-size:12.0pt;line-height:
+150%;font-family:"Times New Roman",serif;color:navy;background:white'>PROC</span></b><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:black;background:white'> </span><b><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif;color:navy;
+background:white'>CANCORR</span></b><span lang=EN-US style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman",serif;color:black;background:
+white'> </span><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:blue;background:white'>DATA</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:black;background:white'>=PRAC.lifestyle_standard</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+text-autospace:none'><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:black;background:white'>&nbsp;&nbsp; </span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:blue;background:white'>vprefix</span><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif;color:black;
+background:white'>=E </span><span lang=EN-US style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman",serif;color:blue;background:
+white'>wprefix</span><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:black;background:white'>=M; </span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+text-autospace:none'><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:black;background:white'>&nbsp;&nbsp; </span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:blue;background:white'>VAR</span><span lang=EN-US style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman",serif;color:black;background:
+white'> achievement PERSONAL_AWARDS TIME_FOR_PASSION TODO_COMPLETED; </span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+text-autospace:none'><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:black;background:white'>&nbsp;&nbsp; </span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:blue;background:white'>WITH</span><span lang=EN-US style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman",serif;color:black;background:
+white'> LOST_VACATION DONATION LIVE_VISION SUFFICIENT_INCOME;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+text-autospace:none'><b><span lang=EN-US style='font-size:12.0pt;line-height:
+150%;font-family:"Times New Roman",serif;color:navy;background:white'>RUN</span></b><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:black;background:white'>;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+text-autospace:none'><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:black;background:white'>&nbsp;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+text-autospace:none'><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:#1B7A1B;background:white'>*Regression;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+text-autospace:none'><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:blue;background:white'>ods</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:black;background:white'> </span><span lang=EN-US style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman",serif;color:blue;background:
+white'>graphics</span><span lang=EN-US style='font-size:12.0pt;line-height:
+150%;font-family:"Times New Roman",serif;color:black;background:white'> </span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:blue;background:white'>on</span><span lang=EN-US style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman",serif;color:black;background:
+white'>;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+text-autospace:none'><b><span lang=EN-US style='font-size:12.0pt;line-height:
+150%;font-family:"Times New Roman",serif;color:navy;background:white'>proc</span></b><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:black;background:white'> </span><b><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif;color:navy;
+background:white'>pls</span></b><span lang=EN-US style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman",serif;color:black;background:
+white'> </span><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:blue;background:white'>data</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:black;background:white'> = PRAC.lifestyle_standard </span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:blue;background:white'>method</span><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif;color:black;
+background:white'> = pls(</span><span lang=EN-US style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman",serif;color:blue;background:
+white'>algorithm</span><span lang=EN-US style='font-size:12.0pt;line-height:
+150%;font-family:"Times New Roman",serif;color:black;background:white'>=nipals)
+</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+text-autospace:none'><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:black;background:white'>&nbsp;</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:blue;background:white'>cv</span><span lang=EN-US style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman",serif;color:black;background:
+white'>=one </span><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:blue;background:white'>cvtest</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:black;background:white'>(</span><span lang=EN-US style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman",serif;color:blue;background:
+white'>seed</span><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:black;background:white'>=</span><b><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:#08726D;background:white'>608789001</span></b><span lang=EN-US
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:black;background:white'>) </span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+text-autospace:none'><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:black;background:white'>&nbsp;plot=(vip
+xyscores xscores parmprofiles dmod);</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+text-autospace:none'><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:black;background:white'>&nbsp;</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:blue;background:white'>model</span><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif;color:black;
+background:white'> WORK_LIFE_BALANCE_SCORE = fruits_veggies--weekly_meditation;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:150%;
+text-autospace:none'><b><span lang=EN-US style='font-size:12.0pt;line-height:
+150%;font-family:"Times New Roman",serif;color:navy;background:white'>run</span></b><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:black;background:white'>;</span></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif;color:blue;
+background:white'>ods</span><span lang=EN-US style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman",serif;color:black;background:
+white'> </span><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:blue;background:white'>graphics</span><span
+lang=EN-US style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif;
+color:black;background:white'> </span><span lang=EN-US style='font-size:12.0pt;
+line-height:150%;font-family:"Times New Roman",serif;color:blue;background:
+white'>off</span><span lang=EN-US style='font-size:12.0pt;line-height:150%;
+font-family:"Times New Roman",serif;color:black;background:white'>;</span></p>
+
+<p class=MsoNormal style='line-height:150%'><b><span lang=EN-US
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>&nbsp;</span></b></p>
+
+<p class=MsoNormal style='line-height:150%'><b><span lang=EN-US
+style='font-size:12.0pt;line-height:150%;font-family:"Times New Roman",serif'>&nbsp;</span></b></p>
+
+<p class=MsoNormal style='line-height:150%'><span lang=EN-US style='font-size:
+12.0pt;line-height:150%;font-family:"Times New Roman",serif'>&nbsp;</span></p>
+
+</div>
+
+</body>
+
+</html>
