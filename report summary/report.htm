@@ -1,376 +1,109 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta http-equiv=Content-Type content="text/html; charset=UTF-8">
-<meta name=Generator content="Microsoft Word 15 (filtered)">
-<style>
-<!--
- /* Font Definitions */
- @font-face
-	{font-family:Wingdings;
-	panose-1:5 0 0 0 0 0 0 0 0 0;}
-@font-face
-	{font-family:"Cambria Math";
-	panose-1:2 4 5 3 5 4 6 3 2 4;}
-@font-face
-	{font-family:等线;
-	panose-1:2 1 6 0 3 1 1 1 1 1;}
-@font-face
-	{font-family:"等线 Light";
-	panose-1:2 1 6 0 3 1 1 1 1 1;}
-@font-face
-	{font-family:"Aptos Display";}
-@font-face
-	{font-family:Aptos;}
-@font-face
-	{font-family:"\@等线 Light";}
-@font-face
-	{font-family:"\@等线";
-	panose-1:2 1 6 0 3 1 1 1 1 1;}
- /* Style Definitions */
- p.MsoNormal, li.MsoNormal, div.MsoNormal
-	{margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:8.0pt;
-	margin-left:0cm;
-	line-height:115%;
-	font-size:12.0pt;
-	font-family:"Aptos",sans-serif;}
-h2
-	{mso-style-link:"Heading 2 Char";
-	margin-top:8.0pt;
-	margin-right:0cm;
-	margin-bottom:4.0pt;
-	margin-left:0cm;
-	line-height:115%;
-	page-break-after:avoid;
-	font-size:16.0pt;
-	font-family:"Aptos Display",sans-serif;
-	color:#0F4761;
-	font-weight:normal;}
-h3
-	{mso-style-link:"Heading 3 Char";
-	margin-top:8.0pt;
-	margin-right:0cm;
-	margin-bottom:4.0pt;
-	margin-left:0cm;
-	line-height:115%;
-	page-break-after:avoid;
-	font-size:14.0pt;
-	font-family:"Aptos",sans-serif;
-	color:#0F4761;
-	font-weight:normal;}
-h4
-	{mso-style-link:"Heading 4 Char";
-	margin-top:4.0pt;
-	margin-right:0cm;
-	margin-bottom:2.0pt;
-	margin-left:0cm;
-	line-height:115%;
-	page-break-after:avoid;
-	font-size:12.0pt;
-	font-family:"Aptos",sans-serif;
-	color:#0F4761;
-	font-weight:normal;
-	font-style:italic;}
-p.MsoCaption, li.MsoCaption, div.MsoCaption
-	{margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:10.0pt;
-	margin-left:0cm;
-	font-size:9.0pt;
-	font-family:"Aptos",sans-serif;
-	color:#0E2841;
-	font-style:italic;}
-p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
-	{margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:8.0pt;
-	margin-left:36.0pt;
-	line-height:115%;
-	font-size:12.0pt;
-	font-family:"Aptos",sans-serif;}
-p.MsoListParagraphCxSpFirst, li.MsoListParagraphCxSpFirst, div.MsoListParagraphCxSpFirst
-	{margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:0cm;
-	margin-left:36.0pt;
-	line-height:115%;
-	font-size:12.0pt;
-	font-family:"Aptos",sans-serif;}
-p.MsoListParagraphCxSpMiddle, li.MsoListParagraphCxSpMiddle, div.MsoListParagraphCxSpMiddle
-	{margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:0cm;
-	margin-left:36.0pt;
-	line-height:115%;
-	font-size:12.0pt;
-	font-family:"Aptos",sans-serif;}
-p.MsoListParagraphCxSpLast, li.MsoListParagraphCxSpLast, div.MsoListParagraphCxSpLast
-	{margin-top:0cm;
-	margin-right:0cm;
-	margin-bottom:8.0pt;
-	margin-left:36.0pt;
-	line-height:115%;
-	font-size:12.0pt;
-	font-family:"Aptos",sans-serif;}
-span.Heading2Char
-	{mso-style-name:"Heading 2 Char";
-	mso-style-link:"Heading 2";
-	font-family:"Aptos Display",sans-serif;
-	color:#0F4761;}
-span.Heading3Char
-	{mso-style-name:"Heading 3 Char";
-	mso-style-link:"Heading 3";
-	font-family:"等线 Light";
-	color:#0F4761;}
-span.Heading4Char
-	{mso-style-name:"Heading 4 Char";
-	mso-style-link:"Heading 4";
-	font-family:"等线 Light";
-	color:#0F4761;
-	font-style:italic;}
-.MsoChpDefault
-	{font-size:12.0pt;}
-.MsoPapDefault
-	{margin-bottom:8.0pt;
-	line-height:115%;}
- /* Page Definitions */
- @page WordSection1
-	{size:595.3pt 841.9pt;
-	margin:2.0cm 53.85pt 2.0cm 53.85pt;}
-div.WordSection1
-	{page:WordSection1;}
- /* List Definitions */
- ol
-	{margin-bottom:0cm;}
-ul
-	{margin-bottom:0cm;}
--->
-</style>
-
+  <meta charset="UTF-8">
+  <title>Report Summary</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.5;
+      margin: 40px;
+    }
+    h2, h3, h4 {
+      color: #0F4761;
+    }
+    ul {
+      margin-left: 20px;
+    }
+    .caption {
+      font-size: 10pt;
+      color: #0E2841;
+      font-style: italic;
+      text-align: center;
+    }
+    table {
+      border-collapse: collapse;
+      margin: 20px auto;
+    }
+    table, th, td {
+      border: 1px solid #999999;
+    }
+    th, td {
+      padding: 8px;
+      text-align: center;
+    }
+  </style>
 </head>
 
-<body lang=EN-NZ style='word-wrap:break-word'>
+<body>
+  <h2>Report Summary: Economic Downturn and Child Poverty in New Zealand</h2>
 
-<div class=WordSection1>
+  <h3>1. Research Focus</h3>
+  <p>This report explores New Zealand's socio-economic data. Based on initial findings, it focuses on how the economic downturn has affected child well-being—particularly poverty.</p>
 
-<h2 style='margin-bottom:0cm;line-height:150%'>Report Summary:<span
-style='font-family:"Aptos",sans-serif;color:windowtext'> &nbsp;</span>Economic
-Downturn and Child Poverty in New Zealand</h2>
+  <h3>2. Overview of Analytical Workflow</h3>
+  <p style="text-align: center;">
+    <img src="report.files/image001.jpg" alt="Workflow Chart" width="600">
+  </p>
 
-<h3 style='margin-bottom:0cm;line-height:150%'>1. Research Focus</h3>
+  <h3>3. Summary of Key Findings</h3>
+  <ul>
+    <li>The higher the unemployment, the more children fall into poverty—this is true across all poverty levels.</li>
+    <li>Children in the poorest households (40% threshold) are consistently affected when unemployment rises.</li>
+    <li>In families closer to the poverty line (50% and 60%), the connection between job loss and child poverty goes up and down more, likely affected by external factors such as policy, economic shifts, or support programs.</li>
+  </ul>
 
-<p class=MsoNormal style='margin-bottom:0cm;line-height:150%'>This report
-explores New Zealand's socio-economic data. Based on initial findings, it focuses
-on how the economic downturn has affected child well-being - particularly
-poverty.</p>
+  <h3>4. Key Findings</h3>
+  <h4>Long-Term Unemployment and Child Poverty</h4>
+  <p><strong>Research Question:</strong> How does long-term unemployment influence child poverty across different poverty thresholds?</p>
+  <p>Lagged correlation analysis was conducted between the long-term unemployment rate and child poverty rates under three poverty thresholds (40%, 50%, 60% of median income):</p>
 
-<h3 style='margin-bottom:0cm;line-height:150%'>&nbsp;</h3>
+  <p><strong>Key Insights</strong></p>
+  <ul>
+    <li>Positive correlation: Child poverty increases as long-term unemployment rises, across all poverty thresholds.</li>
+    <li>Deeper poverty is more sensitive: The lower the poverty threshold, the stronger the correlation.</li>
+    <li>Interpretation: Economic shocks affect the poorest families most severely, increasing the likelihood of children falling into deep poverty.</li>
+  </ul>
 
-<h3 style='margin-bottom:0cm;line-height:150%'>2. Overview of Analytical
-Workflow</h3>
+  <p style="text-align: center;">
+    <img src="report.files/image002.jpg" alt="Correlation Graph" width="600"><br>
+    <span class="caption"><strong>Figure 1:</strong> Lagged Unemployment and Child Poverty Rates (2012–2020)</span>
+  </p>
 
-<p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;
-line-height:150%'><img width=596 height=381 src="report.files/image001.jpg"
-alt="A screenshot of a flowchart&#10;&#10;AI-generated content may be incorrect."></p>
+  <h4>Correlation Table</h4>
+  <table>
+    <tr>
+      <th>Poverty Line</th>
+      <th>1-Year Lag Correlation with Unemployment</th>
+    </tr>
+    <tr>
+      <td>40% Median</td>
+      <td>0.79 (strongest)</td>
+    </tr>
+    <tr>
+      <td>50% Median</td>
+      <td>0.67</td>
+    </tr>
+    <tr>
+      <td>60% Median</td>
+      <td>0.61</td>
+    </tr>
+  </table>
+  <p class="caption"><strong>Table 1:</strong> 1-Year Lag Correlation: Unemployment and Child Poverty</p>
 
-<h4 style='margin-bottom:0cm;line-height:150%'>&nbsp;</h4>
+  <h4>Temporal Trends in Correlation</h4>
+  <p><strong>Research Question:</strong> How does the correlation between the long-term unemployment rate and the three child poverty rates vary over time?</p>
+  <p><strong>Key Insights</strong></p>
+  <ul>
+    <li>The 40% poverty line shows a stable and strong correlation with long-term unemployment.<br>→ Suggests that children in deep poverty are consistently affected by unemployment, with fewer external disruptions.</li>
+    <li>Correlations for the 50% and 60% poverty lines fluctuate more, possibly due to various external factors such as policy, economic shifts, or support programs.</li>
+    <li>In short: When the economy worsens, children in the deepest poverty are the most reliably and persistently affected.</li>
+  </ul>
 
-<h3 style='line-height:150%'>3. Summary of Key Findings</h3>
-
-<p class=MsoListParagraphCxSpFirst style='text-indent:-18.0pt;line-height:150%'><span
-style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span>The higher the unemployment, the more children fall into
-poverty—this is true across all poverty levels.</p>
-
-<p class=MsoListParagraphCxSpMiddle style='text-indent:-18.0pt;line-height:
-150%'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span>Children in the poorest households (40% threshold) are
-consistently affected when unemployment rises.</p>
-
-<p class=MsoListParagraphCxSpLast style='text-indent:-18.0pt;line-height:150%'><span
-style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span>In families closer to the poverty line (50% and 60%), the
-connection between job loss and child poverty goes up and down more, likely
-affected by external factors such as policy, economic shifts, or support
-programs.</p>
-
-<span style='font-size:14.0pt;line-height:150%;font-family:"Aptos",sans-serif;
-color:#0F4761'><br clear=all style='page-break-before:always'>
-</span>
-
-<h3 style='line-height:150%'>4. Key Findings</h3>
-
-<h4 style='margin:0cm;line-height:150%'>Long-Term Unemployment and Child
-Poverty</h4>
-
-<p class=MsoNormal style='margin-bottom:0cm;line-height:150%'><b>Research
-Question</b></p>
-
-<p class=MsoNormal style='margin-bottom:0cm;line-height:150%'>How does
-long-term unemployment influence child poverty across different poverty
-thresholds?</p>
-
-<p class=MsoNormal style='margin-bottom:0cm;line-height:150%'>Lagged
-correlation analysis was conducted between the long-term unemployment rate and
-child poverty rates under three poverty thresholds (40%, 50%, 60% of median
-income):</p>
-
-<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:0cm;margin-top:0cm;
-line-height:150%'><b>Key Insights</b></p>
-
-<ul style='margin-top:0cm' type=disc>
- <li class=MsoNormal style='margin-bottom:0cm;margin-bottom:0cm;margin-top:
-     0cm;line-height:150%'>Positive correlation: Child poverty increases as
-     long-term unemployment rises, across all poverty thresholds.</li>
- <li class=MsoNormal style='margin-bottom:0cm;margin-bottom:0cm;margin-top:
-     0cm;line-height:150%'>Deeper poverty is more sensitive: The lower the
-     poverty threshold, the stronger the correlation.</li>
- <li class=MsoNormal style='margin-bottom:0cm;margin-bottom:0cm;margin-top:
-     0cm;line-height:150%'>Interpretation: Economic shocks affect the poorest
-     families most severely, increasing the likelihood of children falling into
-     deep poverty.</li>
-</ul>
-
-<p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:8.0pt;
-text-align:center;line-height:150%;page-break-after:avoid'><img width=604
-height=335 src="report.files/image002.jpg"
-alt="A graph of a line graph&#10;&#10;AI-generated content may be incorrect."></p>
-
-<p class=MsoCaption align=center style='margin-bottom:0cm;text-align:center;
-line-height:150%'><b><span style='font-size:10.0pt;line-height:150%'>Figure </span></b><b><span style='font-size:10.0pt;line-height:150%'>1</span></b><span style='font-size:
-10.0pt;line-height:150%'> Lagged Unemployment and Child Poverty Rates
-(2012–2020)</span></p>
-
-<p class=MsoNormal style='margin-bottom:0cm;margin-top:0cm;line-height:150%'>&nbsp;</p>
-
-<div align=center>
-
-<table class=MsoTable15Grid1Light border=1 cellspacing=0 cellpadding=0
- style='border-collapse:collapse;border:none'>
- <tr>
-  <td width=123 valign=top style='width:91.9pt;border:solid #999999 1.0pt;
-  border-bottom:solid #666666 1.5pt;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:0cm;
-  margin-top:0cm;text-align:center;line-height:150%'><b><span style='font-size:
-  11.0pt;line-height:150%'>Poverty Line</span></b></p>
-  </td>
-  <td width=350 valign=top style='width:262.25pt;border-top:solid #999999 1.0pt;
-  border-left:none;border-bottom:solid #666666 1.5pt;border-right:solid #999999 1.0pt;
-  padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:0cm;
-  margin-top:0cm;text-align:center;line-height:150%'><b><span style='font-size:
-  11.0pt;line-height:150%'>1-Year Lag Correlation with Unemployment</span></b></p>
-  </td>
- </tr>
- <tr>
-  <td width=123 valign=top style='width:91.9pt;border:solid #999999 1.0pt;
-  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:0cm;
-  margin-top:0cm;text-align:center;line-height:150%'><b><span style='font-size:
-  11.0pt;line-height:150%'>40% Median</span></b></p>
-  </td>
-  <td width=350 valign=top style='width:262.25pt;border-top:none;border-left:
-  none;border-bottom:solid #999999 1.0pt;border-right:solid #999999 1.0pt;
-  padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:0cm;
-  margin-top:0cm;text-align:center;line-height:150%'><span style='font-size:
-  11.0pt;line-height:150%'>0.79 (strongest)</span></p>
-  </td>
- </tr>
- <tr>
-  <td width=123 valign=top style='width:91.9pt;border:solid #999999 1.0pt;
-  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:0cm;
-  margin-top:0cm;text-align:center;line-height:150%'><b><span style='font-size:
-  11.0pt;line-height:150%'>50% Median</span></b></p>
-  </td>
-  <td width=350 valign=top style='width:262.25pt;border-top:none;border-left:
-  none;border-bottom:solid #999999 1.0pt;border-right:solid #999999 1.0pt;
-  padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:0cm;
-  margin-top:0cm;text-align:center;line-height:150%'><span style='font-size:
-  11.0pt;line-height:150%'>0.67</span></p>
-  </td>
- </tr>
- <tr>
-  <td width=123 valign=top style='width:91.9pt;border:solid #999999 1.0pt;
-  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:0cm;
-  margin-top:0cm;text-align:center;line-height:150%'><b><span style='font-size:
-  11.0pt;line-height:150%'>60% Median</span></b></p>
-  </td>
-  <td width=350 valign=top style='width:262.25pt;border-top:none;border-left:
-  none;border-bottom:solid #999999 1.0pt;border-right:solid #999999 1.0pt;
-  padding:0cm 5.4pt 0cm 5.4pt'>
-  <p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:0cm;
-  margin-top:0cm;text-align:center;line-height:150%;page-break-after:avoid'><span
-  style='font-size:11.0pt;line-height:150%'>0.61</span></p>
-  </td>
- </tr>
-</table>
-
-</div>
-
-<p class=MsoCaption align=center style='margin-bottom:0cm;text-align:center;
-line-height:150%'><b><span style='font-size:10.0pt;line-height:150%'>Table </span></b><b><span style='font-size:10.0pt;line-height:150%'>1</span></b><span style='font-size:
-10.0pt;line-height:150%'> 1-Year Lag Correlation: Unemployment and Child Poverty</span></p>
-
-<h4 style='margin-bottom:0cm;line-height:150%'>Temporal Trends in Correlation</h4>
-
-<p class=MsoNormal style='margin-bottom:0cm;margin-top:0cm;line-height:150%'><b>Research
-question</b><br>
-How does the correlation between the long-term unemployment rate and the three
-child poverty rates vary over time?</p>
-
-<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:8.0pt;line-height:
-150%'><b>Key Insights</b></p>
-
-<p class=MsoListParagraphCxSpFirst style='margin-bottom:0cm;text-indent:-18.0pt;
-line-height:150%'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span>The 40% poverty line shows a stable and strong correlation with long-term
-unemployment.<br>
-→ Suggests that children in deep poverty are consistently affected by
-unemployment, with fewer external disruptions.</p>
-
-<p class=MsoListParagraphCxSpMiddle style='margin-bottom:0cm;text-indent:-18.0pt;
-line-height:150%'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span>Correlations for the 50% and 60% poverty lines fluctuate more,
-possibly due to various external factors such as policy, economic shifts, or
-support programs.</p>
-
-<p class=MsoListParagraphCxSpLast style='margin-bottom:0cm;text-indent:-18.0pt;
-line-height:150%'><span style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</span></span>In short: When the economy worsens, children in the deepest
-poverty are the most reliably and persistently affected.</p>
-
-<p class=MsoNormal style='margin-bottom:0cm;margin-top:0cm;line-height:150%'>&nbsp;</p>
-
-<p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:8.0pt;
-text-align:center;line-height:150%;page-break-after:avoid'><img width=625
-height=323 id="Picture 1" src="report.files/image003.jpg"
-alt="A graph of a line graph&#10;&#10;AI-generated content may be incorrect."></p>
-
-<p class=MsoCaption align=center style='margin-bottom:0cm;text-align:center;
-line-height:150%'><b><span style='font-size:10.0pt;line-height:150%'>Figure </span></b><b><span style='font-size:10.0pt;line-height:150%'>2</span></b><span style='font-size:
-10.0pt;line-height:150%'> Rolling Correlation of Unemployment and Child Poverty
-(2013–2020).</span></p>
-
-<p class=MsoNormal align=center style='margin-bottom:0cm;text-align:center;
-line-height:150%'><i><span style='font-size:10.0pt;line-height:150%;color:#0E2841'>Note:
-Calculated using a 3-year rolling window. Correlation reflects delayed effects
-of unemployment.</span></i></p>
-
-<h3 style='line-height:150%'>&nbsp;</h3>
-
-<p class=MsoNormal style='margin-bottom:0cm;margin-top:0cm;line-height:150%'>&nbsp;</p>
-
-<p class=MsoNormal style='margin-bottom:0cm;margin-bottom:8.0pt;line-height:
-150%'>&nbsp;</p>
-
-</div>
-
+  <p style="text-align: center;">
+    <img src="report.files/image003.jpg" alt="Rolling Correlation Graph" width="600"><br>
+    <span class="caption"><strong>Figure 2:</strong> Rolling Correlation of Unemployment and Child Poverty (2013–2020)</span><br>
+    <span class="caption"><em>Note: Calculated using a 3-year rolling window. Correlation reflects delayed effects of unemployment.</em></span>
+  </p>
 </body>
-
 </html>
